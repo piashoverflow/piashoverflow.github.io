@@ -120,6 +120,36 @@ layout: null
         <!-- Project Grid -->
         <div class="projects-grid" id="project-catalog-grid">
 
+          <!-- 0. FGM Connecting Rod Optimization (Thesis & ASME Research) -->
+          <article class="project-card catalog-project-card tilt-card" data-category="fea">
+            <div class="project-badge-row">
+              <span class="project-tag">Undergraduate Thesis</span>
+              <span class="project-tag">ASME JMD</span>
+              <span class="project-tag">ANSYS FEA</span>
+            </div>
+            <h3 class="project-title">FGM Connecting Rod Optimization &amp; Spatial Gradation</h3>
+            <p class="project-desc">
+              Coupled thermo-mechanical FEA optimization (82,500+ nodes) across 45 material combinations using Wärtsilä 20 engine geometry. Implements 5 spatial gradation laws across an 8.85 mm transition layer, achieving +14.88% SF gain and -12.39% stress reduction.
+            </p>
+            <div class="project-equation" style="background: var(--bg-surface-elevated); padding: 0.6rem 0.8rem; border-radius: var(--radius-sm); font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan); margin-bottom: 1rem;">
+              V₁(x) = (e^{βx/h} - 1)/(e^β - 1),  J = Σ w_i (R_i/R_{ref})²
+            </div>
+            <div class="project-tech-stack">
+              <span class="tech-pill">ANSYS Workbench</span>
+              <span class="tech-pill">SolidWorks</span>
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">SSE Optimization</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/piashoverflow/fgm-connecting-rod-optimization" class="project-link" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i> Repository &amp; Scripts
+              </a>
+              <a href="{{ '/research/' | relative_url }}" class="project-link" style="color: var(--accent-cyan);">
+                <i class="fas fa-microscope"></i> Full Thesis Analysis
+              </a>
+            </div>
+          </article>
+
           <!-- 1. Atwood Machine Physics Lab -->
           <article class="project-card catalog-project-card tilt-card" data-category="sim">
             <div class="project-badge-row">
