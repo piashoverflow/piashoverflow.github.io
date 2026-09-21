@@ -5,7 +5,7 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-## Mohammad Shamsuddin Piash
+## Shamsuddin Piash
 
 **Mechanical Engineering Graduate**  
 *Bangladesh University of Engineering and Technology (BUET)*  

@@ -1,5 +1,5 @@
 /**
- * PORTFOLIO JAVASCRIPT — MOHAMMAD SHAMSUDDIN PIASH
+ * PORTFOLIO JAVASCRIPT — SHAMSUDDIN PIASH
  * Advanced Vanilla JS:
  * 1. Interactive Dual-Engine Physics & FGM Stress Simulator (HTML5 Canvas)
  * 2. Animated Stats Counter (IntersectionObserver)
@@ -211,14 +211,14 @@
   // ==========================================================================
   const bibtexEntries = {
     'asme-2025': `@article{piash2025multiobjective,
-  author    = {Piash, Mohammad Shamsuddin and Ali, Md. Afsar},
+  author    = {Piash, Shamsuddin and Ali, Md. Afsar},
   title     = {Multi-Objective Structural and Material Optimization of Bimaterial Mechanical Components},
   journal   = {ASME Journal of Mechanical Design},
   year      = {2025},
   note      = {Under Review}
 }`,
     'fgm-review': `@article{piash2025fgmreview,
-  author    = {Piash, Mohammad Shamsuddin},
+  author    = {Piash, Shamsuddin},
   title     = {State-of-the-Art in Functionally Graded Material Gradation Laws and Computational Optimization},
   journal   = {Manuscript in Preparation for Q1 Materials/Mechanics Journal},
   year      = {2025}
