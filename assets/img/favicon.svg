@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#131b2e" />
+      <stop offset="60%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#04060a" />
+    </radialGradient>
+
+    <!-- Border Glow Gradient -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <!-- SP Monogram Gradient -->
+    <linearGradient id="textGrad" x1="10%" y1="10%" x2="90%" y2="90%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="45%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+
+    <!-- Orbit Gradient -->
+    <linearGradient id="orbitGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.9" />
+    </linearGradient>
+
+    <!-- Node Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Squircle Base -->
+  <rect x="24" y="24" width="464" height="464" rx="108" ry="108" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="12" />
+
+  <!-- Background FEA Nodal Grid Accents -->
+  <g opacity="0.18" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4,6">
+    <line x1="80" y1="140" x2="432" y2="140" />
+    <line x1="80" y1="372" x2="432" y2="372" />
+    <line x1="140" y1="80" x2="140" y2="432" />
+    <line x1="372" y1="80" x2="372" y2="432" />
+    <circle cx="140" cy="140" r="4" fill="#38bdf8" />
+    <circle cx="372" cy="140" r="4" fill="#38bdf8" />
+    <circle cx="140" cy="372" r="4" fill="#38bdf8" />
+    <circle cx="372" cy="372" r="4" fill="#38bdf8" />
+  </g>
+
+  <!-- Orbital Ring (Physics / Mechanics Theme) -->
+  <ellipse cx="256" cy="256" rx="190" ry="76" fill="none" stroke="url(#orbitGrad)" stroke-width="7" transform="rotate(-30 256 256)" filter="url(#glow)" />
+  
+  <!-- Orbiting Quantum / Mesh Particle -->
+  <circle cx="395" cy="175" r="14" fill="#38bdf8" filter="url(#glow)" />
+  <circle cx="395" cy="175" r="7" fill="#ffffff" />
+
+  <circle cx="117" cy="337" r="9" fill="#818cf8" filter="url(#glow)" />
+
+  <!-- Central "SP" Typography Monogram -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-weight="900" font-size="210" letter-spacing="-8" fill="url(#textGrad)" text-anchor="middle" dominant-baseline="central">
+    <text x="256" y="266">SP</text>
+  </g>
+
+  <!-- Dynamic Energy Dot -->
+  <circle cx="360" cy="205" r="6" fill="#00f0ff" />
+</svg>

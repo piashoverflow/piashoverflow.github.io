@@ -23,6 +23,13 @@ layout: null
   <meta name="twitter:description" content="Structural Mechanics, Functionally Graded Materials (FGM), FEA Optimization, and Physics Simulations.">
   <meta name="twitter:image" content="{{ '/assets/img/profile.jpg' | relative_url }}">
 
+  <!-- Favicon & PWA Chore Essentials -->
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon.svg' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/img/favicon-32x32.png' | relative_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
+  <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
+  <meta name="theme-color" content="#090d16">
+
   <!-- Icons & Fonts -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="{{ '/assets/css/portfolio.css' | relative_url }}">
@@ -68,12 +75,11 @@ layout: null
 
       <nav aria-label="Main Navigation">
         <ul class="nav-links">
-          <li><a href="#research" class="nav-link">Research</a></li>
+          <li><a href="{{ '/research/' | relative_url }}" class="nav-link">Research</a></li>
+          <li><a href="{{ '/projects/' | relative_url }}" class="nav-link">Projects</a></li>
+          <li><a href="{{ '/teaching/' | relative_url }}" class="nav-link">Teaching</a></li>
+          <li><a href="{{ '/cv/' | relative_url }}" class="nav-link">CV</a></li>
           <li><a href="#simulator" class="nav-link"><i class="fas fa-atom"></i> Simulator</a></li>
-          <li><a href="#publications" class="nav-link">Publications</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#teaching" class="nav-link">Teaching</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
           <li><a href="{{ '/blogs/' | relative_url }}" class="nav-link blog-link"><i class="fas fa-pen-nib"></i> Blogs</a></li>
         </ul>
       </nav>
@@ -82,8 +88,8 @@ layout: null
         <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Switch Theme">
           <i class="fas fa-sun"></i>
         </button>
-        <a href="#contact" class="btn-cta-nav">
-          <i class="fas fa-envelope"></i> Contact
+        <a href="{{ '/assets/docs/Shamsuddin_Piash_CV.pdf' | relative_url }}" class="btn-cta-nav" target="_blank" rel="noopener noreferrer">
+          <i class="fas fa-file-pdf"></i> CV (PDF)
         </a>
         <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle Menu">
           <i class="fas fa-bars"></i>
@@ -94,12 +100,11 @@ layout: null
 
   <!-- Mobile Navigation Drawer -->
   <div class="mobile-nav-drawer" id="mobile-nav-drawer">
-    <a href="#research" class="nav-link">Research & Thesis</a>
+    <a href="{{ '/research/' | relative_url }}" class="nav-link">Research & Thesis</a>
+    <a href="{{ '/projects/' | relative_url }}" class="nav-link">Projects Catalog</a>
+    <a href="{{ '/teaching/' | relative_url }}" class="nav-link">Teaching Experience</a>
+    <a href="{{ '/cv/' | relative_url }}" class="nav-link">Curriculum Vitae</a>
     <a href="#simulator" class="nav-link"><i class="fas fa-atom"></i> Interactive Simulator</a>
-    <a href="#publications" class="nav-link">Publications</a>
-    <a href="#projects" class="nav-link">Projects</a>
-    <a href="#teaching" class="nav-link">Teaching Experience</a>
-    <a href="#skills" class="nav-link">Technical Skills</a>
     <a href="{{ '/blogs/' | relative_url }}" class="nav-link blog-link"><i class="fas fa-pen-nib"></i> Read Blogs (/blogs)</a>
     <a href="{{ '/assets/docs/Shamsuddin_Piash_CV.pdf' | relative_url }}" class="btn-primary" target="_blank" rel="noopener noreferrer">
       <i class="fas fa-file-pdf"></i> Download CV (PDF)
@@ -111,6 +116,7 @@ layout: null
          HERO SECTION
          ============================================================================== -->
     <section class="hero-section" id="hero">
+      <canvas class="bg-network-canvas" aria-hidden="true"></canvas>
       <div class="container hero-grid">
         <div class="hero-content">
           <div class="hero-badge-wrap">
@@ -144,17 +150,20 @@ layout: null
           </div>
 
           <div class="hero-actions">
-            <a href="#research" class="btn-primary">
-              <i class="fas fa-microscope"></i> Explore Research
+            <a href="{{ '/research/' | relative_url }}" class="btn-primary">
+              <i class="fas fa-microscope"></i> Research & Thesis
             </a>
             <a href="#simulator" class="btn-secondary">
               <i class="fas fa-play-circle"></i> Live Simulator
             </a>
+            <a href="{{ '/projects/' | relative_url }}" class="btn-secondary">
+              <i class="fas fa-code-branch"></i> Projects (8+)
+            </a>
+            <a href="{{ '/cv/' | relative_url }}" class="btn-secondary">
+              <i class="fas fa-file-alt"></i> View CV
+            </a>
             <a href="{{ '/blogs/' | relative_url }}" class="btn-outline-blog">
               <i class="fas fa-book-open"></i> Read Blogs
-            </a>
-            <a href="{{ '/assets/docs/Shamsuddin_Piash_CV.pdf' | relative_url }}" class="btn-secondary" target="_blank" rel="noopener noreferrer">
-              <i class="fas fa-download"></i> CV (PDF)
             </a>
           </div>
         </div>
@@ -436,6 +445,12 @@ layout: null
             </div>
           </div>
         </div>
+
+        <div style="text-align: center; margin-top: 2.5rem;">
+          <a href="{{ '/research/' | relative_url }}" class="btn-primary" style="display: inline-flex;">
+            <i class="fas fa-microscope"></i> Explore Full Research: 5 Gradation Laws & 10 FEA Metrics →
+          </a>
+        </div>
       </div>
     </section>
 
@@ -637,6 +652,12 @@ layout: null
             </div>
           </div>
         </div>
+
+        <div style="text-align: center; margin-top: 2.5rem;">
+          <a href="{{ '/projects/' | relative_url }}" class="btn-primary" style="display: inline-flex;">
+            <i class="fas fa-th-large"></i> View All 8+ Open-Source Projects &amp; Simulators →
+          </a>
+        </div>
       </div>
     </section>
 
@@ -687,6 +708,12 @@ layout: null
             </p>
             <div class="quote-author">— Shamsuddin Piash</div>
           </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2.5rem;">
+          <a href="{{ '/teaching/' | relative_url }}" class="btn-primary" style="display: inline-flex;">
+            <i class="fas fa-chalkboard-teacher"></i> Explore Udvash-Unmesh 5-Year Pedagogy &amp; Masterclasses →
+          </a>
         </div>
       </div>
     </section>
@@ -854,9 +881,14 @@ layout: null
         <div class="contact-cta-box">
           <h4>Download Full Curriculum Vitae</h4>
           <p>Includes detailed academic transcripts, thesis methodology, conference submissions, and teaching references.</p>
-          <a href="{{ '/assets/docs/Shamsuddin_Piash_CV.pdf' | relative_url }}" class="btn-primary" style="width: 100%; justify-content: center; margin-bottom: 1rem;" target="_blank" rel="noopener noreferrer">
-            <i class="fas fa-file-pdf"></i> Download CV (PDF)
-          </a>
+          <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1rem;">
+            <a href="{{ '/cv/' | relative_url }}" class="btn-primary" style="width: 100%; justify-content: center;">
+              <i class="fas fa-file-invoice"></i> View Web-Rendered CV
+            </a>
+            <a href="{{ '/assets/docs/Shamsuddin_Piash_CV.pdf' | relative_url }}" class="btn-secondary" style="width: 100%; justify-content: center;" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-file-pdf"></i> Download Official PDF
+            </a>
+          </div>
           <button id="copy-email-btn" class="btn-secondary" style="width: 100%; justify-content: center;">
             <i class="fas fa-copy"></i> Copy Email Address
           </button>
@@ -875,8 +907,11 @@ layout: null
       </div>
       <ul class="footer-links">
         <li><a href="#hero">Back to Top ↑</a></li>
-        <li><a href="{{ '/blogs/' | relative_url }}">Blog Archive</a></li>
-        <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+        <li><a href="{{ '/research/' | relative_url }}">Research</a></li>
+        <li><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
+        <li><a href="{{ '/teaching/' | relative_url }}">Teaching</a></li>
+        <li><a href="{{ '/cv/' | relative_url }}">CV</a></li>
+        <li><a href="{{ '/blogs/' | relative_url }}">Blogs</a></li>
         <li><a href="https://github.com/piashoverflow" target="_blank" rel="noopener noreferrer">GitHub</a></li>
       </ul>
     </div>

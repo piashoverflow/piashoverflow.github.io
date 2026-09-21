@@ -1,0 +1,300 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teaching & STEM Pedagogy | Shamsuddin Piash</title>
+  <meta name="description" content="5+ years of Physics instruction, Udvash-Unmesh academic masterclasses, 'Golpe Golpe Physics' curriculum, and elite problem authoring by Shamsuddin Piash.">
+  <meta name="author" content="Shamsuddin Piash">
+
+  <!-- OpenGraph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://piashoverflow.github.io/teaching/">
+  <meta property="og:title" content="Teaching & STEM Pedagogy | Shamsuddin Piash">
+  <meta property="og:description" content="5+ years of Physics instruction, 5,000+ students mentored, 'Golpe Golpe Physics' curriculum, and educational technology UX.">
+  <meta property="og:image" content="{{ '/assets/img/profile.jpg' | relative_url }}">
+
+  <!-- Favicon & PWA -->
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon.svg' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/img/favicon-32x32.png' | relative_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
+  <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
+  <meta name="theme-color" content="#090d16">
+
+  <!-- Fonts & Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="{{ '/assets/css/portfolio.css' | relative_url }}">
+</head>
+<body>
+
+  <!-- Top Reading Progress Bar -->
+  <div id="scroll-progress"></div>
+  <div class="bg-grid-overlay"></div>
+
+  <!-- Navigation Bar -->
+  <header class="site-nav" id="site-nav">
+    <div class="container nav-container">
+      <a href="{{ '/' | relative_url }}" class="brand-logo" aria-label="Shamsuddin Piash">
+        <div class="brand-icon">SP</div>
+        <div class="brand-text">piash<span>overflow</span></div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="{{ '/' | relative_url }}" class="nav-link">Home</a></li>
+          <li><a href="{{ '/research/' | relative_url }}" class="nav-link">Research</a></li>
+          <li><a href="{{ '/projects/' | relative_url }}" class="nav-link">Projects</a></li>
+          <li><a href="{{ '/teaching/' | relative_url }}" class="nav-link active">Teaching</a></li>
+          <li><a href="{{ '/cv/' | relative_url }}" class="nav-link">CV</a></li>
+          <li><a href="{{ '/#simulator' | relative_url }}" class="nav-link"><i class="fas fa-atom"></i> Simulator</a></li>
+          <li><a href="{{ '/blogs/' | relative_url }}" class="nav-link blog-link"><i class="fas fa-pen-nib"></i> Blogs</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Switch Theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <a href="{{ '/assets/docs/Shamsuddin_Piash_CV.pdf' | relative_url }}" class="btn-cta-nav" target="_blank" rel="noopener noreferrer">
+          <i class="fas fa-file-pdf"></i> CV (PDF)
+        </a>
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <a href="{{ '/' | relative_url }}" class="nav-link">Home</a>
+    <a href="{{ '/research/' | relative_url }}" class="nav-link">Research & Thesis</a>
+    <a href="{{ '/projects/' | relative_url }}" class="nav-link">Projects Catalog</a>
+    <a href="{{ '/teaching/' | relative_url }}" class="nav-link active">Teaching & Pedagogy</a>
+    <a href="{{ '/cv/' | relative_url }}" class="nav-link">Curriculum Vitae</a>
+    <a href="{{ '/#simulator' | relative_url }}" class="nav-link"><i class="fas fa-atom"></i> Interactive Simulator</a>
+    <a href="{{ '/blogs/' | relative_url }}" class="nav-link blog-link"><i class="fas fa-pen-nib"></i> Read Blogs (/blogs)</a>
+  </div>
+
+  <main>
+    <!-- Subpage Hero Header -->
+    <section class="subpage-hero">
+      <canvas class="bg-network-canvas" aria-hidden="true"></canvas>
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="{{ '/' | relative_url }}"><i class="fas fa-home"></i> Home</a>
+          <span class="separator">/</span>
+          <span class="active-crumb">Teaching & Pedagogy</span>
+        </div>
+        <span class="section-tag"><i class="fas fa-chalkboard-teacher"></i> Science Communication & Education</span>
+        <h1 class="subpage-title">Teaching Experience & STEM Pedagogy</h1>
+        <p class="subpage-lead">
+          5+ years empowering over 5,000 students at Udvash-Unmesh Academic & Admission Care through first-principles physics instruction, demonstration-first video curricula, and smart educational gamification.
+        </p>
+      </div>
+    </section>
+
+    <!-- Key Metrics Highlight -->
+    <section class="metrics-bar-section">
+      <div class="container metrics-grid">
+        <div class="metric-box">
+          <div class="metric-number">5+</div>
+          <div class="metric-label">Years Experience</div>
+          <div class="metric-subtext">Udvash-Unmesh (2020–Present)</div>
+        </div>
+
+        <div class="metric-box">
+          <div class="metric-number">5,000+</div>
+          <div class="metric-label">Students Mentored</div>
+          <div class="metric-subtext">Secondary & Higher Secondary</div>
+        </div>
+
+        <div class="metric-box">
+          <div class="metric-number">1,200</div>
+          <div class="metric-label">Seminar Capacity</div>
+          <div class="metric-subtext">Large-Hall Masterclasses</div>
+        </div>
+
+        <div class="metric-box">
+          <div class="metric-number">100%</div>
+          <div class="metric-label">First-Principles</div>
+          <div class="metric-subtext">Zero Rote Memorization</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Teaching Journey & Core Pillars -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header" style="text-align: left; margin-bottom: 2.5rem;">
+          <span class="section-tag">Educational Philosophy</span>
+          <h2 class="section-title">Four Pillars of First-Principles STEM Pedagogy</h2>
+          <p class="section-subtitle" style="margin-top: 0.4rem;">
+            How I transform complex mechanical and mathematical theories into intuitive, indelible mental models.
+          </p>
+        </div>
+
+        <div class="research-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-bottom: 4rem;">
+          <!-- Pillar 1 -->
+          <div class="pedagogy-pillar tilt-card">
+            <div class="pillar-icon-box">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3 style="font-size: 1.2rem; color: var(--text-bright); margin-bottom: 0.6rem;">Intuition Before Formulation</h3>
+            <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.65;">
+              Equations are summaries of physical reality, not starting points. Every concept begins with physical phenomena, tactile thought experiments, and qualitative reasoning before introducing mathematical machinery.
+            </p>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="pedagogy-pillar tilt-card">
+            <div class="pillar-icon-box">
+              <i class="fas fa-flask"></i>
+            </div>
+            <h3 style="font-size: 1.2rem; color: var(--text-bright); margin-bottom: 0.6rem;">Tabletop Demonstrations</h3>
+            <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.65;">
+              Developed the prominent <em>Golpe Golpe Physics</em> (Physics through Stories) video curriculum, using practical physical props to unveil Archimedes' buoyancy, Lenz's law induction, and gyro precession in action.
+            </p>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="pedagogy-pillar tilt-card">
+            <div class="pillar-icon-box">
+              <i class="fas fa-chess-knight"></i>
+            </div>
+            <h3 style="font-size: 1.2rem; color: var(--text-bright); margin-bottom: 0.6rem;">Non-Routine Problem Design</h3>
+            <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.65;">
+              Authored multi-concept challenge problems for the elite <em>"Tukhor"</em> batch, training Bangladesh's top prospective engineering students to synthesize mechanics, thermodynamics, and electromagnetism into unified solutions.
+            </p>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="pedagogy-pillar tilt-card">
+            <div class="pillar-icon-box">
+              <i class="fas fa-gamepad"></i>
+            </div>
+            <h3 style="font-size: 1.2rem; color: var(--text-bright); margin-bottom: 0.6rem;">Smart Gamification & EdTech UX</h3>
+            <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.65;">
+              Architected student XP progression models, structured concept mastery trees, and cognitive load reduction frameworks for Udvash's smart online digital learning ecosystem.
+            </p>
+          </div>
+        </div>
+
+        <!-- Udvash-Unmesh Academic Experience Breakdown -->
+        <div class="section-header" style="text-align: left; margin-bottom: 2.5rem;">
+          <span class="section-tag">Professional Roles & Responsibilities</span>
+          <h2 class="section-title">Udvash-Unmesh Academic & Admission Care</h2>
+          <p class="section-subtitle" style="margin-top: 0.4rem;">
+            Academic Content Contributor & Physics Instructor (2020 – Present | Dhaka, Bangladesh).
+          </p>
+        </div>
+
+        <div class="research-grid" style="grid-template-columns: 1fr 1fr; margin-bottom: 4rem;">
+          <div class="research-card tilt-card" style="padding: 2.2rem;">
+            <div class="pub-badge-row" style="margin-bottom: 1rem;">
+              <span class="pub-status-badge">Curriculum & Video Production</span>
+            </div>
+            <h3 style="color: var(--accent-cyan); font-size: 1.3rem; margin-bottom: 1rem;">
+              <i class="fas fa-video"></i> "Golpe Golpe Physics" Video Curriculum
+            </h3>
+            <p style="color: var(--text-regular); line-height: 1.7; font-size: 0.92rem; margin-bottom: 1rem;">
+              Created an engaging conceptual physics series designed to eliminate the fear of physics among high school and college students across Bangladesh.
+            </p>
+            <ul style="color: var(--text-regular); line-height: 1.7; font-size: 0.9rem; padding-left: 1.2rem;">
+              <li><strong>Fluid Dynamics:</strong> Demonstrating Bernoulli's principle and boundary layer separation using air blowers and venturi tubes.</li>
+              <li><strong>Archimedes & Buoyancy:</strong> Revealing buoyant force equilibria and hydrostatic paradoxes via custom tabletop water manometers.</li>
+              <li><strong>Electromagnetic Induction:</strong> Visualizing eddy current damping and Faraday-Lenz magnetic braking using neodymium magnets and copper tubes.</li>
+              <li><strong>Rotational Mechanics:</strong> Experiencing angular momentum conservation and gyroscopic stability using rotating platforms and bicycle wheels.</li>
+            </ul>
+          </div>
+
+          <div class="research-card tilt-card" style="padding: 2.2rem;">
+            <div class="pub-badge-row" style="margin-bottom: 1rem;">
+              <span class="pub-status-badge" style="color: var(--accent-emerald); background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.3);">
+                Large-Scale Academic Outreach
+              </span>
+            </div>
+            <h3 style="color: var(--accent-emerald); font-size: 1.3rem; margin-bottom: 1rem;">
+              <i class="fas fa-users"></i> Keynote Masterclasses (1,000+ Students)
+            </h3>
+            <p style="color: var(--text-regular); line-height: 1.7; font-size: 0.92rem; margin-bottom: 1rem;">
+              Selected as a premier nationwide speaker for admission guidance seminars and conceptual masterclasses held in major convention halls across Dhaka and regional divisional centers.
+            </p>
+            <ul style="color: var(--text-regular); line-height: 1.7; font-size: 0.9rem; padding-left: 1.2rem;">
+              <li><strong>Auditorium Engagement:</strong> Communicating complex ideas to auditoriums of 1,000 to 1,200 engineering candidates with clarity and interactive polling.</li>
+              <li><strong>Exam Strategy:</strong> Breaking down BUET, Medical, and University admission question trends, time-allocation discipline, and accuracy optimization.</li>
+              <li><strong>Psychological Mentorship:</strong> Guiding students through exam anxiety, consistent study habits, and analytical perseverance under pressure.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Student Feedback & Teaching Highlights -->
+        <div class="simulator-card" style="padding: 2.5rem; background: var(--bg-surface-elevated); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg);">
+          <div style="display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap;">
+            <div style="width: 70px; height: 70px; border-radius: 50%; background: var(--accent-cyan); display: flex; align-items: center; justify-content: center; font-size: 2rem; color: #070b14; flex-shrink: 0;">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <div style="flex: 1; min-width: 260px;">
+              <p style="font-size: 1.15rem; font-style: italic; color: var(--text-bright); line-height: 1.7; margin-bottom: 0.6rem;">
+                "True teaching does not consist in transferring static answers from a teacher's notebook to a student's memory. It consists in igniting an insatiable curiosity to interrogate the physical universe from first principles."
+              </p>
+              <div style="font-family: var(--font-mono); font-size: 0.88rem; color: var(--accent-cyan);">
+                — Shamsuddin Piash (Academic Philosophy)
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Bottom CTA Bar -->
+    <section class="section" style="background: var(--bg-surface); border-top: 1px solid var(--border-subtle); padding: 4rem 0;">
+      <div class="container" style="text-align: center;">
+        <h3 style="font-size: 1.8rem; margin-bottom: 0.85rem;">Interested in Educational Seminars or Guest Lectures?</h3>
+        <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 1.5rem auto;">
+          Available for academic masterclasses, physics problem-authoring consultations, and STEM pedagogical seminars.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="mailto:mohammadshamsuddinpiash0722@gmail.com" class="btn-primary">
+            <i class="fas fa-envelope"></i> Reach Out via Email
+          </a>
+          <a href="{{ '/cv/' | relative_url }}" class="btn-secondary">
+            <i class="fas fa-file-pdf"></i> View Full CV
+          </a>
+          <a href="{{ '/blogs/' | relative_url }}" class="btn-secondary">
+            <i class="fas fa-pen-nib"></i> Read Essays & Blogs
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div>
+        © {{ site.time | date: '%Y' }} <strong>Shamsuddin Piash</strong>. All rights reserved.
+      </div>
+      <ul class="footer-links">
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li><a href="{{ '/research/' | relative_url }}">Research</a></li>
+        <li><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
+        <li><a href="{{ '/teaching/' | relative_url }}">Teaching</a></li>
+        <li><a href="{{ '/cv/' | relative_url }}">CV</a></li>
+        <li><a href="{{ '/blogs/' | relative_url }}">Blogs</a></li>
+        <li><a href="https://github.com/piashoverflow" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast-notification"></div>
+
+  <!-- Scripts -->
+  <script src="{{ '/assets/js/portfolio.js' | relative_url }}"></script>
+</body>
+</html>

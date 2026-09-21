@@ -21,8 +21,40 @@
       <!-- Portfolio Landing Page link -->
       <li class="nav-item">
         <a href="{{ '/' | relative_url }}" class="nav-link">
-          <i class="fa-fw fas fa-user-graduate"></i>
-          <span>PORTFOLIO</span>
+          <i class="fa-fw fas fa-home"></i>
+          <span>HOME</span>
+        </a>
+      </li>
+
+      <!-- Research link -->
+      <li class="nav-item{% if page.url contains '/research' %}{{ " active" }}{% endif %}">
+        <a href="{{ '/research/' | relative_url }}" class="nav-link">
+          <i class="fa-fw fas fa-microscope"></i>
+          <span>RESEARCH</span>
+        </a>
+      </li>
+
+      <!-- Projects link -->
+      <li class="nav-item{% if page.url contains '/projects' %}{{ " active" }}{% endif %}">
+        <a href="{{ '/projects/' | relative_url }}" class="nav-link">
+          <i class="fa-fw fas fa-code-branch"></i>
+          <span>PROJECTS</span>
+        </a>
+      </li>
+
+      <!-- Teaching link -->
+      <li class="nav-item{% if page.url contains '/teaching' %}{{ " active" }}{% endif %}">
+        <a href="{{ '/teaching/' | relative_url }}" class="nav-link">
+          <i class="fa-fw fas fa-chalkboard-teacher"></i>
+          <span>TEACHING</span>
+        </a>
+      </li>
+
+      <!-- CV link -->
+      <li class="nav-item{% if page.url contains '/cv' %}{{ " active" }}{% endif %}">
+        <a href="{{ '/cv/' | relative_url }}" class="nav-link">
+          <i class="fa-fw fas fa-file-invoice"></i>
+          <span>CV</span>
         </a>
       </li>
 

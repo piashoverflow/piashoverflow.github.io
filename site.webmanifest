@@ -1,0 +1,26 @@
+{
+  "name": "Shamsuddin Piash | Mechanical Engineer & Researcher",
+  "short_name": "Piash",
+  "description": "Portfolio of Shamsuddin Piash — BUET Mechanical Engineering graduate specializing in Structural Mechanics, Functionally Graded Materials (FGM), FEA Optimization, and STEM Pedagogy.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090d16",
+  "theme_color": "#0ea5e9",
+  "icons": [
+    {
+      "src": "/assets/img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/assets/img/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/apple-touch-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

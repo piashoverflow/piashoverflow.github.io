@@ -884,8 +884,207 @@
     animId = requestAnimationFrame(atwoodLoop);
   }
 
+
+  // ==========================================================================
+  // AMBIENT FEA NETWORK CANVAS (PARTICLES & FINITE ELEMENT MESH)
+  // ==========================================================================
+  function initFeaNetworkCanvas() {
+    const canvas = document.querySelector('.bg-network-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    let width = 0;
+    let height = 0;
+    let particles = [];
+    const particleCount = window.innerWidth < 768 ? 25 : 55;
+    const connectionDist = 130;
+    const mouseRadius = 160;
+    let mouse = { x: -1000, y: -1000, active: false };
+
+    function resize() {
+      const parent = canvas.parentElement || document.body;
+      width = canvas.width = parent.clientWidth;
+      height = canvas.height = parent.clientHeight || window.innerHeight;
+    }
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.vx = (Math.random() - 0.5) * 0.45;
+        this.vy = (Math.random() - 0.5) * 0.45;
+        this.radius = Math.random() * 1.8 + 1.2;
+      }
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+
+        if (this.x < 0 || this.x > width) this.vx *= -1;
+        if (this.y < 0 || this.y > height) this.vy *= -1;
+
+        // Mouse interaction (soft attraction / stress field)
+        if (mouse.active) {
+          const dx = mouse.x - this.x;
+          const dy = mouse.y - this.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < mouseRadius && dist > 1) {
+            const force = (1 - dist / mouseRadius) * 0.04;
+            this.x += dx * force;
+            this.y += dy * force;
+          }
+        }
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = '#38bdf8';
+        ctx.fill();
+      }
+    }
+
+    function initParticles() {
+      particles = [];
+      for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+      }
+    }
+
+    function renderNetwork() {
+      ctx.clearRect(0, 0, width, height);
+
+      // Connect FEA mesh lines
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const p1 = particles[i];
+          const p2 = particles[j];
+          const dx = p2.x - p1.x;
+          const dy = p2.y - p1.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+
+          if (dist < connectionDist) {
+            const alpha = (1 - dist / connectionDist) * 0.28;
+            ctx.strokeStyle = 'rgba(56, 189, 248, ' + alpha + ')';
+            ctx.lineWidth = 0.8;
+            ctx.beginPath();
+            ctx.moveTo(p1.x, p1.y);
+            ctx.lineTo(p2.x, p2.y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      // Draw and update nodes
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+
+      requestAnimationFrame(renderNetwork);
+    }
+
+    window.addEventListener('resize', () => {
+      resize();
+      initParticles();
+    });
+
+    const parent = canvas.parentElement || window;
+    parent.addEventListener('mousemove', (e) => {
+      const rect = canvas.getBoundingClientRect();
+      mouse.x = e.clientX - rect.left;
+      mouse.y = e.clientY - rect.top;
+      mouse.active = true;
+    });
+
+    parent.addEventListener('mouseleave', () => {
+      mouse.active = false;
+    });
+
+    resize();
+    initParticles();
+    renderNetwork();
+  }
+
+  // ==========================================================================
+  // 3D INTERACTIVE TILT & RADIAL SPECULAR GLARE
+  // ==========================================================================
+  function initCardTilt() {
+    const tiltCards = document.querySelectorAll('.tilt-card, .research-card, .project-card, .profile-card, .pedagogy-pillar, .math-card');
+    
+    // Check for reduced motion preference
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    tiltCards.forEach(card => {
+      card.classList.add('tilt-card');
+
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        const percentX = (x / rect.width) * 100;
+        const percentY = (y / rect.height) * 100;
+        
+        const rotateX = ((y - centerY) / centerY) * -6.5;
+        const rotateY = ((x - centerX) / centerX) * 6.5;
+
+        card.style.transform = 'perspective(1000px) rotateX(' + rotateX.toFixed(2) + 'deg) rotateY(' + rotateY.toFixed(2) + 'deg) scale3d(1.015, 1.015, 1.015)';
+        card.style.setProperty('--mouse-x', percentX.toFixed(1) + '%');
+        card.style.setProperty('--mouse-y', percentY.toFixed(1) + '%');
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+        card.style.setProperty('--mouse-x', '-500px');
+        card.style.setProperty('--mouse-y', '-500px');
+      });
+    });
+  }
+
+  // ==========================================================================
+  // PROJECT FILTERING (PROJECTS PAGE)
+  // ==========================================================================
+  function initProjectFilters() {
+    const filterBtns = document.querySelectorAll('.project-filter-btn');
+    const projectCards = document.querySelectorAll('.catalog-project-card');
+
+    if (!filterBtns.length || !projectCards.length) return;
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+
+        projectCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            card.style.display = 'flex';
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            }, 30);
+          } else {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(15px)';
+            setTimeout(() => {
+              card.style.display = 'none';
+            }, 200);
+          }
+        });
+      });
+    });
+  }
+
   // Initialize
   initTheme();
+  initFeaNetworkCanvas();
+  initCardTilt();
+  initProjectFilters();
   updateFgmValues();
   updateAtwoodParams();
   setTimeout(resizeCanvas, 100);

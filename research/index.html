@@ -1,0 +1,480 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research & Thesis | Shamsuddin Piash</title>
+  <meta name="description" content="Computational Solid Mechanics, FGM Transition Layers, FEA Optimization, and Mechanical Modeling by Shamsuddin Piash (BUET '25).">
+  <meta name="author" content="Shamsuddin Piash">
+
+  <!-- OpenGraph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://piashoverflow.github.io/research/">
+  <meta property="og:title" content="Research & Thesis | Shamsuddin Piash">
+  <meta property="og:description" content="Finite Element Analysis, Functionally Graded Materials (FGM), and Multi-Objective Structural Optimization.">
+  <meta property="og:image" content="{{ '/assets/img/profile.jpg' | relative_url }}">
+
+  <!-- Favicon & PWA -->
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon.svg' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/img/favicon-32x32.png' | relative_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
+  <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
+  <meta name="theme-color" content="#090d16">
+
+  <!-- Fonts & Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="{{ '/assets/css/portfolio.css' | relative_url }}">
+</head>
+<body>
+
+  <!-- Top Reading Progress Bar -->
+  <div id="scroll-progress"></div>
+  <div class="bg-grid-overlay"></div>
+
+  <!-- ==============================================================================
+       NAVIGATION BAR
+       ============================================================================== -->
+  <header class="site-nav" id="site-nav">
+    <div class="container nav-container">
+      <a href="{{ '/' | relative_url }}" class="brand-logo" aria-label="Shamsuddin Piash">
+        <div class="brand-icon">SP</div>
+        <div class="brand-text">piash<span>overflow</span></div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="{{ '/' | relative_url }}" class="nav-link">Home</a></li>
+          <li><a href="{{ '/research/' | relative_url }}" class="nav-link active">Research</a></li>
+          <li><a href="{{ '/projects/' | relative_url }}" class="nav-link">Projects</a></li>
+          <li><a href="{{ '/teaching/' | relative_url }}" class="nav-link">Teaching</a></li>
+          <li><a href="{{ '/cv/' | relative_url }}" class="nav-link">CV</a></li>
+          <li><a href="{{ '/#simulator' | relative_url }}" class="nav-link"><i class="fas fa-atom"></i> Simulator</a></li>
+          <li><a href="{{ '/blogs/' | relative_url }}" class="nav-link blog-link"><i class="fas fa-pen-nib"></i> Blogs</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Switch Theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <a href="{{ '/assets/docs/Shamsuddin_Piash_CV.pdf' | relative_url }}" class="btn-cta-nav" target="_blank" rel="noopener noreferrer">
+          <i class="fas fa-file-pdf"></i> CV (PDF)
+        </a>
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <a href="{{ '/' | relative_url }}" class="nav-link">Home</a>
+    <a href="{{ '/research/' | relative_url }}" class="nav-link active">Research & Thesis</a>
+    <a href="{{ '/projects/' | relative_url }}" class="nav-link">Projects Catalog</a>
+    <a href="{{ '/teaching/' | relative_url }}" class="nav-link">Teaching & Pedagogy</a>
+    <a href="{{ '/cv/' | relative_url }}" class="nav-link">Curriculum Vitae</a>
+    <a href="{{ '/#simulator' | relative_url }}" class="nav-link"><i class="fas fa-atom"></i> Interactive Simulator</a>
+    <a href="{{ '/blogs/' | relative_url }}" class="nav-link blog-link"><i class="fas fa-pen-nib"></i> Read Blogs (/blogs)</a>
+  </div>
+
+  <main>
+    <!-- Subpage Hero Header -->
+    <section class="subpage-hero">
+      <canvas class="bg-network-canvas" aria-hidden="true"></canvas>
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="{{ '/' | relative_url }}"><i class="fas fa-home"></i> Home</a>
+          <span class="separator">/</span>
+          <span class="active-crumb">Research & Thesis</span>
+        </div>
+        <span class="section-tag"><i class="fas fa-microscope"></i> Computational Solid Mechanics</span>
+        <h1 class="subpage-title">Research & Academic Thesis</h1>
+        <p class="subpage-lead">
+          Investigating continuous spatial gradation laws, finite element formulations, coupled thermo-structural simulations, 
+          and multi-objective optimization algorithms for next-generation Functionally Graded Material (FGM) mechanical components.
+        </p>
+      </div>
+    </section>
+
+    <!-- Thesis Overview Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header" style="text-align: left; margin-bottom: 2.5rem;">
+          <span class="section-tag">Undergraduate Thesis (BUET 2024–2025)</span>
+          <h2 class="section-title">Multi-Objective Optimization of Connecting Rods: A Coupled Thermal-Structural Approach</h2>
+          <p class="section-subtitle" style="margin: 0.5rem 0 0 0;">
+            Supervised by <strong>Prof. Dr. Md. Afsar Ali</strong>, Department of Mechanical Engineering, 
+            Bangladesh University of Engineering and Technology (BUET).
+          </p>
+        </div>
+
+        <div class="research-grid" style="grid-template-columns: 1.2fr 0.8fr; margin-bottom: 3rem;">
+          <div class="research-card tilt-card glow-card-pulse" style="padding: 2.2rem;">
+            <h3 style="color: var(--accent-cyan); font-size: 1.35rem; margin-bottom: 1rem;">
+              <i class="fas fa-cogs"></i> Problem Formulation & Engineering Challenge
+            </h3>
+            <p style="color: var(--text-regular); line-height: 1.7; margin-bottom: 1.2rem;">
+              Internal combustion engine connecting rods operate under extreme cyclic thermo-mechanical environments, experiencing peak compressive combustion pressures exceeding 15 MPa alongside high inertial tension during exhaust strokes. Conventional monolithic steel connecting rods introduce excessive reciprocating mass, degrading fuel economy and elevating bearing loads. Conversely, lightweight aluminum alloys suffer thermal softening and fatigue degradation at the big-end bearing journal.
+            </p>
+            <p style="color: var(--text-regular); line-height: 1.7; margin-bottom: 1.2rem;">
+              To resolve this fundamental engineering dilemma, this research investigated an advanced <strong>bimaterial and functionally graded architecture</strong> applied to an industrial heavy-duty <strong>Wärtsilä 20 engine connecting rod</strong> geometry.
+            </p>
+            
+            <div style="background: var(--bg-surface-elevated); border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 1.2rem; margin-top: 1.5rem;">
+              <h4 style="font-size: 0.92rem; color: var(--accent-cyan); margin-bottom: 0.6rem; text-transform: uppercase; font-family: var(--font-mono);">
+                Key Engineering Highlights
+              </h4>
+              <ul style="color: var(--text-regular); line-height: 1.7; margin: 0; padding-left: 1.2rem; font-size: 0.9rem;">
+                <li><strong>Geometry:</strong> Full-scale Wärtsilä 20 marine/stationary diesel engine connecting rod modeled parametrically in SolidWorks.</li>
+                <li><strong>FEA Discretization:</strong> Over <strong>82,500 nodes</strong> and <strong>29,500 higher-order 3D solid elements</strong> in ANSYS Workbench with localized curvature mesh refinement.</li>
+                <li><strong>Boundary Conditions:</strong> Coupled steady-state thermal distribution ($T = 280^\circ\text{C}$ piston pin, $T = 90^\circ\text{C}$ crank pin) superimposed with peak gas compressive force ($F = 180\text{ kN}$).</li>
+                <li><strong>Multi-Objective SSE Optimization:</strong> Sum of Squared Errors normalization evaluated across <strong>45 material configurations</strong> encompassing AISI 4340 Steel, Al 7075-T6, and Ti-6Al-4V.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="research-card tilt-card" style="padding: 2.2rem; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <h3 style="color: var(--accent-cyan); font-size: 1.35rem; margin-bottom: 1rem;">
+                <i class="fas fa-chart-line"></i> Validated Results
+              </h3>
+              <p style="color: var(--text-regular); line-height: 1.7; font-size: 0.95rem; margin-bottom: 1.5rem;">
+                Quantitative achievements comparing optimal FGM transition architecture against the baseline monolithic AISI 4340 structural steel:
+              </p>
+
+              <div style="display: flex; flex-direction: column; gap: 1rem;">
+                <div style="background: var(--bg-surface-elevated); border-left: 4px solid var(--accent-emerald); padding: 0.85rem 1rem; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;">
+                  <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">SAFETY FACTOR IMPROVEMENT</div>
+                  <div style="font-size: 1.5rem; font-weight: 800; color: var(--accent-emerald);">+14.88% Gain</div>
+                  <div style="font-size: 0.82rem; color: var(--text-muted);">From 1.21 to 1.39 (Fillet-optimized 4.61 to 5.29)</div>
+                </div>
+
+                <div style="background: var(--bg-surface-elevated); border-left: 4px solid var(--accent-cyan); padding: 0.85rem 1rem; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;">
+                  <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">COMPONENT MASS REDUCTION</div>
+                  <div style="font-size: 1.5rem; font-weight: 800; color: var(--accent-cyan);">-3.82% Reciprocating Mass</div>
+                  <div style="font-size: 0.82rem; color: var(--text-muted);">From 48.42 kg down to 46.57 kg</div>
+                </div>
+
+                <div style="background: var(--bg-surface-elevated); border-left: 4px solid var(--accent-purple); padding: 0.85rem 1rem; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;">
+                  <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">PEAK VON MISES STRESS RELIEF</div>
+                  <div style="font-size: 1.5rem; font-weight: 800; color: var(--accent-purple);">-12.39% Stress Drop</div>
+                  <div style="font-size: 0.82rem; color: var(--text-muted);">Relieved from 490.76 MPa down to 429.97 MPa</div>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 1.5rem;">
+              <a href="{{ '/#simulator' | relative_url }}" class="btn-primary" style="width: 100%; justify-content: center;">
+                <i class="fas fa-play-circle"></i> Launch Live Stress Simulator
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- FGM Transition Layer Mathematical Gradation Laws -->
+        <div class="section-header" style="text-align: left; margin-top: 4rem;">
+          <span class="section-tag">Mathematical Modeling</span>
+          <h2 class="section-title">5 Spatial Volume-Fraction Gradation Laws</h2>
+          <p class="section-subtitle" style="margin-top: 0.4rem;">
+            Comparative formulation across the 8.85 mm transition layer connecting the Aluminum 7075-T6 shank to Structural Steel ends.
+          </p>
+        </div>
+
+        <div class="research-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); margin-top: 2rem;">
+          <!-- Law 1: Exponential -->
+          <div class="math-card tilt-card">
+            <div class="math-card-header">
+              <span class="math-law-name">1. Exponential Law (P-FGM)</span>
+              <span class="math-law-tag">Optimal Smoothness</span>
+            </div>
+            <div class="math-formula-box">
+              V₁(x) = (e^{βx/h} - 1) / (e^{β} - 1)
+            </div>
+            <p class="math-desc">
+              Continuously modulates phase transition across thickness $h=8.85\text{ mm}$ via gradation exponent $\beta \in [0.2, 2.0]$. Effectively eliminates interfacial shear stress concentrations and prevents delamination under cyclic combustion loads.
+            </p>
+          </div>
+
+          <!-- Law 2: Linear Law -->
+          <div class="math-card tilt-card">
+            <div class="math-card-header">
+              <span class="math-law-name">2. Linear Distribution</span>
+              <span class="math-law-tag">Direct Gradient</span>
+            </div>
+            <div class="math-formula-box">
+              V₁(x) = x / h
+            </div>
+            <p class="math-desc">
+              Constant property gradient across the interface. Offers straightforward manufacturing feasibility via additive manufacturing powder deposition, though exhibiting slight derivative discontinuity at the boundaries.
+            </p>
+          </div>
+
+          <!-- Law 3: Sigmoidal S-Curve -->
+          <div class="math-card tilt-card">
+            <div class="math-card-header">
+              <span class="math-law-name">3. Sigmoid Distribution (S-FGM)</span>
+              <span class="math-law-tag">Zero Boundary Shear</span>
+            </div>
+            <div class="math-formula-box">
+              V₁(x) = 1 / (1 + e^{-k(x - h/2)})
+            </div>
+            <p class="math-desc">
+              Features zero first-derivative at both joining boundaries $x=0$ and $x=h$, ensuring seamless elastic modulus continuity and minimizing interfacial shear jump across the Al/Steel boundary.
+            </p>
+          </div>
+
+          <!-- Law 4: Trigonometric Cosine -->
+          <div class="math-card tilt-card">
+            <div class="math-card-header">
+              <span class="math-law-name">4. Cosine Trigonometric Law</span>
+              <span class="math-law-tag">Harmonic Transition</span>
+            </div>
+            <div class="math-formula-box">
+              V₁(x) = (1/2) · [1 - cos(πx / h)]
+            </div>
+            <p class="math-desc">
+              Smooth, infinite differentiability ($C^\infty$) across the transition zone. Smoothly attenuates thermal expansion mismatch $\Delta \alpha \cdot \Delta T$ and suppresses thermal residual stresses.
+            </p>
+          </div>
+
+          <!-- Law 5: Logarithmic Law -->
+          <div class="math-card tilt-card">
+            <div class="math-card-header">
+              <span class="math-law-name">5. Logarithmic Gradation</span>
+              <span class="math-law-tag">Rapid Early Transition</span>
+            </div>
+            <div class="math-formula-box">
+              V₁(x) = ln(1 + αx/h) / ln(1 + α)
+            </div>
+            <p class="math-desc">
+              Prioritizes rapid mechanical impedance matching near the steel boundary while tapering smoothly toward the aluminum shank core, tailoring stress distribution for high-frequency dynamic response.
+            </p>
+          </div>
+
+          <!-- Homogenization Theory -->
+          <div class="math-card tilt-card glow-card-pulse">
+            <div class="math-card-header">
+              <span class="math-law-name">Mori-Tanaka Homogenization</span>
+              <span class="math-law-tag">Micromechanics</span>
+            </div>
+            <div class="math-formula-box">
+              K_eff = K₁ + V₂·(K₂ - K₁) / [1 + (1 - V₂)·(K₂ - K₁)/(K₁ + 4G₁/3)]
+            </div>
+            <p class="math-desc">
+              Mean-field micromechanical homogenization theory accounting for elastic inclusion interaction, yielding significantly greater predictive accuracy than the classical Voigt-Reuss Rule of Mixtures for high inclusion fractions.
+            </p>
+          </div>
+        </div>
+
+        <!-- 10 Evaluated FEA Metrics Table -->
+        <div class="section-header" style="text-align: left; margin-top: 4rem;">
+          <span class="section-tag">FEA Performance Matrix</span>
+          <h2 class="section-title">10 Quantified Structural & Fatigue Metrics</h2>
+          <p class="section-subtitle" style="margin-top: 0.4rem;">
+            Comparative output metrics extracted from ANSYS Workbench finite element simulations across candidate architectures.
+          </p>
+        </div>
+
+        <div class="spec-table-container">
+          <table class="spec-table">
+            <thead>
+              <tr>
+                <th>Performance Metric</th>
+                <th>Monolithic Steel (Baseline)</th>
+                <th>Abrupt Bimaterial Joint</th>
+                <th>Optimized FGM Transition</th>
+                <th>Evaluation Benefit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Equivalent von Mises Stress</strong></td>
+                <td>490.76 MPa</td>
+                <td>542.10 MPa (Stress Spike)</td>
+                <td class="spec-highlight">429.97 MPa</td>
+                <td><span class="spec-badge badge-gain">-12.39% Relief</span></td>
+              </tr>
+              <tr>
+                <td><strong>2. Maximum Principal Stress (σ₁)</strong></td>
+                <td>512.40 MPa</td>
+                <td>585.30 MPa (Singularity)</td>
+                <td class="spec-highlight">448.60 MPa</td>
+                <td><span class="spec-badge badge-gain">-12.45% Relief</span></td>
+              </tr>
+              <tr>
+                <td><strong>3. Interfacial Shear Stress (τ)</strong></td>
+                <td>N/A (Homogeneous)</td>
+                <td>34.20 MPa</td>
+                <td class="spec-highlight">8.70 MPa</td>
+                <td><span class="spec-badge badge-gain">-74.56% Shear Cut</span></td>
+              </tr>
+              <tr>
+                <td><strong>4. Static Factor of Safety (SF)</strong></td>
+                <td>1.21</td>
+                <td>1.09 (Failure Hazard)</td>
+                <td class="spec-highlight">1.39</td>
+                <td><span class="spec-badge badge-gain">+14.88% Boost</span></td>
+              </tr>
+              <tr>
+                <td><strong>5. Geometric Fillet SF (Max Zone)</strong></td>
+                <td>4.61</td>
+                <td>4.20</td>
+                <td class="spec-highlight">5.29</td>
+                <td><span class="spec-badge badge-gain">+14.75% Gain</span></td>
+              </tr>
+              <tr>
+                <td><strong>6. Total Structural Mass</strong></td>
+                <td>48.42 kg</td>
+                <td>47.10 kg</td>
+                <td class="spec-highlight">46.57 kg</td>
+                <td><span class="spec-badge badge-optimal">-3.82% Reciprocating</span></td>
+              </tr>
+              <tr>
+                <td><strong>7. Total Elastic Strain</strong></td>
+                <td>0.00248 mm/mm</td>
+                <td>0.00315 mm/mm</td>
+                <td class="spec-highlight">0.00221 mm/mm</td>
+                <td><span class="spec-badge badge-gain">Smoothed Compliance</span></td>
+              </tr>
+              <tr>
+                <td><strong>8. Total Strain Energy</strong></td>
+                <td>18.42 mJ</td>
+                <td>24.80 mJ (Energy Trap)</td>
+                <td class="spec-highlight">16.90 mJ</td>
+                <td><span class="spec-badge badge-gain">Uniform Dissipation</span></td>
+              </tr>
+              <tr>
+                <td><strong>9. Minimum Fatigue Life</strong></td>
+                <td>1.0 × 10⁶ cycles</td>
+                <td>4.8 × 10⁵ cycles (Severely Degraded)</td>
+                <td class="spec-highlight">&gt; 1.0 × 10⁷ cycles</td>
+                <td><span class="spec-badge badge-optimal">Infinite Life Regime</span></td>
+              </tr>
+              <tr>
+                <td><strong>10. Biaxiality Ratio &amp; Damage</strong></td>
+                <td>0.18 (Uniaxial Dominant)</td>
+                <td>0.48 (Multi-axial Fatigue Hazard)</td>
+                <td class="spec-highlight">0.12</td>
+                <td><span class="spec-badge badge-gain">Mitigated Shear Multiaxiality</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Scholarly Publications & Preprints -->
+        <div class="section-header" style="text-align: left; margin-top: 4.5rem;">
+          <span class="section-tag">Publications & Citations</span>
+          <h2 class="section-title">Scholarly Manuscripts & Preprints</h2>
+          <p class="section-subtitle" style="margin-top: 0.4rem;">
+            Academic manuscripts submitted and under preparation for peer-reviewed international journals.
+          </p>
+        </div>
+
+        <div class="publications-list" style="margin-top: 2rem;">
+          <!-- Paper 1 -->
+          <div class="pub-card tilt-card">
+            <div class="pub-content">
+              <div class="pub-badge-row">
+                <span class="pub-status-badge">Submitted & Under Review (2025)</span>
+                <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">ASME-JMD-2025</span>
+              </div>
+              <h3 class="pub-title">Multi-Objective Structural and Material Optimization of Bimaterial Mechanical Components</h3>
+              <div class="pub-venue">
+                <i class="fas fa-book"></i> American Society of Mechanical Engineers (ASME) Journal of Mechanical Design
+              </div>
+              <div style="font-size: 0.85rem; color: var(--accent-cyan); font-family: var(--font-mono); margin-bottom: 0.6rem;">
+                <strong>Authors:</strong> Shamsuddin Piash, Md. Jahidul Hasan, Khan Yishtiaq Raatul, Dr. Md. Afsar Ali
+              </div>
+              <p class="pub-desc">
+                Details the coupled thermo-mechanical finite element formulations, interfacial shear stress evaluations across bimaterial boundaries, and the Sum of Squared Errors (SSE) multi-objective algorithmic framework for lightweight connecting rod design.
+              </p>
+            </div>
+            <div class="pub-actions">
+              <button class="btn-cite" data-bibtex="asme-2025">
+                <i class="fas fa-quote-right"></i> Copy BibTeX
+              </button>
+            </div>
+          </div>
+
+          <!-- Paper 2 -->
+          <div class="pub-card tilt-card">
+            <div class="pub-content">
+              <div class="pub-badge-row">
+                <span class="pub-status-badge" style="color: var(--accent-cyan); background: rgba(56, 189, 248, 0.1); border-color: rgba(56, 189, 248, 0.3);">
+                  In Preparation (2025)
+                </span>
+                <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">Review Article</span>
+              </div>
+              <h3 class="pub-title">State-of-the-Art in Functionally Graded Material Gradation Laws and Computational Optimization</h3>
+              <div class="pub-venue">
+                <i class="fas fa-journal-whills"></i> Target: Q1 Materials &amp; Structural Mechanics Journal
+              </div>
+              <div style="font-size: 0.85rem; color: var(--accent-cyan); font-family: var(--font-mono); margin-bottom: 0.6rem;">
+                <strong>Lead Author:</strong> Shamsuddin Piash
+              </div>
+              <p class="pub-desc">
+                Extensive synthesis of continuous spatial gradation laws, Voigt/Reuss/Mori-Tanaka homogenization schemes, finite element discretization techniques, and multi-objective Pareto evolutionary optimization for structural FGM components.
+              </p>
+            </div>
+            <div class="pub-actions">
+              <button class="btn-cite" data-bibtex="fgm-review">
+                <i class="fas fa-quote-right"></i> Copy BibTeX
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Bottom CTA Bar -->
+    <section class="section" style="background: var(--bg-surface); border-top: 1px solid var(--border-subtle); padding: 4rem 0;">
+      <div class="container" style="text-align: center;">
+        <h3 style="font-size: 1.8rem; margin-bottom: 0.85rem;">Interested in Collaborating on Computational Mechanics?</h3>
+        <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 1.5rem auto;">
+          I am actively preparing for graduate research programs (Ph.D. / M.S.) with focus on structural mechanics, FGM systems, and FEA optimization.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="{{ '/cv/' | relative_url }}" class="btn-primary">
+            <i class="fas fa-file-alt"></i> View Curriculum Vitae
+          </a>
+          <a href="{{ '/#simulator' | relative_url }}" class="btn-secondary">
+            <i class="fas fa-atom"></i> Try Live Simulator
+          </a>
+          <a href="mailto:mohammadshamsuddinpiash0722@gmail.com" class="btn-secondary">
+            <i class="fas fa-envelope"></i> Email Inquiries
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div>
+        © {{ site.time | date: '%Y' }} <strong>Shamsuddin Piash</strong>. All rights reserved.
+      </div>
+      <ul class="footer-links">
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li><a href="{{ '/research/' | relative_url }}">Research</a></li>
+        <li><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
+        <li><a href="{{ '/teaching/' | relative_url }}">Teaching</a></li>
+        <li><a href="{{ '/cv/' | relative_url }}">CV</a></li>
+        <li><a href="{{ '/blogs/' | relative_url }}">Blogs</a></li>
+        <li><a href="https://github.com/piashoverflow" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast-notification"></div>
+
+  <!-- Scripts -->
+  <script src="{{ '/assets/js/portfolio.js' | relative_url }}"></script>
+</body>
+</html>

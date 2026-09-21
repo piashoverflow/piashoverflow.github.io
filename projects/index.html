@@ -1,0 +1,378 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineering Projects | Shamsuddin Piash</title>
+  <meta name="description" content="Computational mechanics, physics simulators, numerical ODE solvers, and open-source scientific tools by Shamsuddin Piash (@piashoverflow).">
+  <meta name="author" content="Shamsuddin Piash">
+
+  <!-- OpenGraph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://piashoverflow.github.io/projects/">
+  <meta property="og:title" content="Engineering Projects | Shamsuddin Piash">
+  <meta property="og:description" content="Open-source physics simulators, numerical ODE solvers, and FEA tools.">
+  <meta property="og:image" content="{{ '/assets/img/profile.jpg' | relative_url }}">
+
+  <!-- Favicon & PWA -->
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon.svg' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/img/favicon-32x32.png' | relative_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
+  <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
+  <meta name="theme-color" content="#090d16">
+
+  <!-- Fonts & Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="{{ '/assets/css/portfolio.css' | relative_url }}">
+</head>
+<body>
+
+  <!-- Top Reading Progress Bar -->
+  <div id="scroll-progress"></div>
+  <div class="bg-grid-overlay"></div>
+
+  <!-- Navigation Bar -->
+  <header class="site-nav" id="site-nav">
+    <div class="container nav-container">
+      <a href="{{ '/' | relative_url }}" class="brand-logo" aria-label="Shamsuddin Piash">
+        <div class="brand-icon">SP</div>
+        <div class="brand-text">piash<span>overflow</span></div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="{{ '/' | relative_url }}" class="nav-link">Home</a></li>
+          <li><a href="{{ '/research/' | relative_url }}" class="nav-link">Research</a></li>
+          <li><a href="{{ '/projects/' | relative_url }}" class="nav-link active">Projects</a></li>
+          <li><a href="{{ '/teaching/' | relative_url }}" class="nav-link">Teaching</a></li>
+          <li><a href="{{ '/cv/' | relative_url }}" class="nav-link">CV</a></li>
+          <li><a href="{{ '/#simulator' | relative_url }}" class="nav-link"><i class="fas fa-atom"></i> Simulator</a></li>
+          <li><a href="{{ '/blogs/' | relative_url }}" class="nav-link blog-link"><i class="fas fa-pen-nib"></i> Blogs</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Switch Theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <a href="https://github.com/piashoverflow" class="btn-cta-nav" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <a href="{{ '/' | relative_url }}" class="nav-link">Home</a>
+    <a href="{{ '/research/' | relative_url }}" class="nav-link">Research & Thesis</a>
+    <a href="{{ '/projects/' | relative_url }}" class="nav-link active">Projects Catalog</a>
+    <a href="{{ '/teaching/' | relative_url }}" class="nav-link">Teaching & Pedagogy</a>
+    <a href="{{ '/cv/' | relative_url }}" class="nav-link">Curriculum Vitae</a>
+    <a href="{{ '/#simulator' | relative_url }}" class="nav-link"><i class="fas fa-atom"></i> Interactive Simulator</a>
+    <a href="{{ '/blogs/' | relative_url }}" class="nav-link blog-link"><i class="fas fa-pen-nib"></i> Read Blogs (/blogs)</a>
+  </div>
+
+  <main>
+    <!-- Subpage Hero Header -->
+    <section class="subpage-hero">
+      <canvas class="bg-network-canvas" aria-hidden="true"></canvas>
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="{{ '/' | relative_url }}"><i class="fas fa-home"></i> Home</a>
+          <span class="separator">/</span>
+          <span class="active-crumb">Projects</span>
+        </div>
+        <span class="section-tag"><i class="fas fa-code-branch"></i> Open Source & Computational Mechanics</span>
+        <h1 class="subpage-title">Engineering & Computational Projects</h1>
+        <p class="subpage-lead">
+          Interactive physics simulators, numerical ODE integrators, finite element scripts, and scientific models developed with Python, NumPy, JavaScript, and HTML5 Canvas.
+        </p>
+      </div>
+    </section>
+
+    <!-- Projects Catalog Section -->
+    <section class="section">
+      <div class="container">
+
+        <!-- Category Filter Buttons -->
+        <div class="project-filter-container">
+          <button class="project-filter-btn active" data-filter="all">
+            <i class="fas fa-th-large"></i> All Repositories (8+)
+          </button>
+          <button class="project-filter-btn" data-filter="sim">
+            <i class="fas fa-atom"></i> Physics Simulators
+          </button>
+          <button class="project-filter-btn" data-filter="fea">
+            <i class="fas fa-cubes"></i> Dynamics & Mechanics
+          </button>
+          <button class="project-filter-btn" data-filter="computational">
+            <i class="fas fa-calculator"></i> Energy & Numerical Analysis
+          </button>
+        </div>
+
+        <!-- Project Grid -->
+        <div class="projects-grid" id="project-catalog-grid">
+
+          <!-- 1. Atwood Machine Physics Lab -->
+          <article class="project-card catalog-project-card tilt-card" data-category="sim">
+            <div class="project-badge-row">
+              <span class="project-tag">Cloud Simulation</span>
+              <span class="project-tag">RK4 ODE</span>
+            </div>
+            <h3 class="project-title">Atwood Machine Physics Lab</h3>
+            <p class="project-desc">
+              Interactive cloud-deployed simulator modeling coupled multi-body kinematics, string tension dynamics, pulley rotational inertia, and axle viscous friction via continuous 4th-order Runge-Kutta numerical integration.
+            </p>
+            <div class="project-equation" style="background: var(--bg-surface-elevated); padding: 0.6rem 0.8rem; border-radius: var(--radius-sm); font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan); margin-bottom: 1rem;">
+              a = [(m₂ - m₁)g - μ(m₁ + m₂)g] / [m₁ + m₂ + I/R²]
+            </div>
+            <div class="project-tech-stack">
+              <span class="tech-pill">Vanilla JS</span>
+              <span class="tech-pill">HTML5 Canvas</span>
+              <span class="tech-pill">Vercel</span>
+              <span class="tech-pill">RK4 Integration</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/piashoverflow/atwood-machine-physics-lab" class="project-link" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i> Repository
+              </a>
+              <a href="{{ '/#simulator' | relative_url }}" class="project-link" style="color: var(--accent-cyan);">
+                <i class="fas fa-play"></i> Run in Simulator
+              </a>
+            </div>
+          </article>
+
+          <!-- 2. Rocket Propulsion & Variable Mass Dynamics -->
+          <article class="project-card catalog-project-card tilt-card" data-category="sim">
+            <div class="project-badge-row">
+              <span class="project-tag">Aerospace Mechanics</span>
+              <span class="project-tag">Variable Mass</span>
+            </div>
+            <h3 class="project-title">Rocket Propulsion & Variable Mass Dynamics</h3>
+            <p class="project-desc">
+              Computational model simulating variable mass dynamics, fuel burn rates $\dot{m}(t)$, instantaneous thrust vectoring, atmospheric drag profiles, and multi-stage payload optimization based on the Tsiolkovsky rocket equation.
+            </p>
+            <div class="project-equation" style="background: var(--bg-surface-elevated); padding: 0.6rem 0.8rem; border-radius: var(--radius-sm); font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan); margin-bottom: 1rem;">
+              Δv = v_e · ln(m₀ / m_f) - ∫ g·sin(θ) dt
+            </div>
+            <div class="project-tech-stack">
+              <span class="tech-pill">JavaScript</span>
+              <span class="tech-pill">Physics Engine</span>
+              <span class="tech-pill">Numerical ODE</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/piashoverflow/Rocket-Propulsion" class="project-link" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i> Repository
+              </a>
+            </div>
+          </article>
+
+          <!-- 3. Rolling Motion Race on Inclined Planes -->
+          <article class="project-card catalog-project-card tilt-card" data-category="fea">
+            <div class="project-badge-row">
+              <span class="project-tag">Rotational Dynamics</span>
+              <span class="project-tag">Inertia Tensors</span>
+            </div>
+            <h3 class="project-title">Rolling Motion Race on Inclined Planes</h3>
+            <p class="project-desc">
+              Visual simulation comparing velocity and acceleration of diverse geometric bodies (Solid Sphere, Solid Cylinder, Hollow Sphere, Hoop) rolling without slipping down an inclined plane. Demonstrates kinetic energy partitioning into translational vs rotational modes.
+            </p>
+            <div class="project-equation" style="background: var(--bg-surface-elevated); padding: 0.6rem 0.8rem; border-radius: var(--radius-sm); font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan); margin-bottom: 1rem;">
+              a = (g · sin θ) / [1 + I / (m · R²)]
+            </div>
+            <div class="project-tech-stack">
+              <span class="tech-pill">JavaScript</span>
+              <span class="tech-pill">Rigid Body Mechanics</span>
+              <span class="tech-pill">Kinematics</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/piashoverflow/Rolling-Motion-Race" class="project-link" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i> Repository
+              </a>
+            </div>
+          </article>
+
+          <!-- 4. Vertical Circular Motion of Pendulum -->
+          <article class="project-card catalog-project-card tilt-card" data-category="sim">
+            <div class="project-badge-row">
+              <span class="project-tag">Non-Linear Dynamics</span>
+              <span class="project-tag">Phase Space</span>
+            </div>
+            <h3 class="project-title">Vertical Circular Motion of Non-Linear Pendulum</h3>
+            <p class="project-desc">
+              Complete dynamical modeling of a constrained pendulum in a vertical plane. Computes instantaneous tension, tangential acceleration, radial centripetal forces, and energy balance between kinetic and gravitational potential energy across 360 degrees.
+            </p>
+            <div class="project-equation" style="background: var(--bg-surface-elevated); padding: 0.6rem 0.8rem; border-radius: var(--radius-sm); font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan); margin-bottom: 1rem;">
+              T(θ) = m · [g · cos θ + v(θ)² / L],  v_min = √(5gR)
+            </div>
+            <div class="project-tech-stack">
+              <span class="tech-pill">Canvas Engine</span>
+              <span class="tech-pill">Vector Calculus</span>
+              <span class="tech-pill">Energy Diagnostics</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/piashoverflow/Vertical-Circular-Motion" class="project-link" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i> Repository
+              </a>
+            </div>
+          </article>
+
+          <!-- 5. Conservation of Mechanical Energy Verification -->
+          <article class="project-card catalog-project-card tilt-card" data-category="computational">
+            <div class="project-badge-row">
+              <span class="project-tag">Classical Mechanics</span>
+              <span class="project-tag">Path Independence</span>
+            </div>
+            <h3 class="project-title">Tracking Energy in Arbitrary Potential Wells</h3>
+            <p class="project-desc">
+              Numerical verification demonstrating mechanical energy conservation across diverse curvilinear paths. Validates path-independent work in conservative gravitational fields and characterizes non-conservative dissipation under Rayleigh dissipation functions.
+            </p>
+            <div class="project-equation" style="background: var(--bg-surface-elevated); padding: 0.6rem 0.8rem; border-radius: var(--radius-sm); font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan); margin-bottom: 1rem;">
+              dE/dt = 0  ⇒  ∮ F_c · dr = 0
+            </div>
+            <div class="project-tech-stack">
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">NumPy</span>
+              <span class="tech-pill">Numerical Solvers</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/piashoverflow/Conservation-of-Mechanical-Energy" class="project-link" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i> Repository
+              </a>
+            </div>
+          </article>
+
+          <!-- 6. Conservative vs Non-Conservative Force Field Analysis -->
+          <article class="project-card catalog-project-card tilt-card" data-category="computational">
+            <div class="project-badge-row">
+              <span class="project-tag">Vector Calculus</span>
+              <span class="project-tag">Field Theory</span>
+            </div>
+            <h3 class="project-title">Conservative &amp; Non-Conservative Force Fields</h3>
+            <p class="project-desc">
+              Analytical and numerical tests verifying force field curl conditions $\nabla \times \vec{F} = \vec{0}$. Evaluates closed-contour line integrals for inverse-square, electrostatic, spring, and viscous frictional damping fields.
+            </p>
+            <div class="project-equation" style="background: var(--bg-surface-elevated); padding: 0.6rem 0.8rem; border-radius: var(--radius-sm); font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan); margin-bottom: 1rem;">
+              ∇ × F = 0  ⇔  F = -∇U
+            </div>
+            <div class="project-tech-stack">
+              <span class="tech-pill">Vector Fields</span>
+              <span class="tech-pill">Line Integrals</span>
+              <span class="tech-pill">Scientific Python</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/piashoverflow/Conservative-and-non-conservative-Force" class="project-link" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i> Repository
+              </a>
+            </div>
+          </article>
+
+          <!-- 7. Work Done by Variable Forces Engine -->
+          <article class="project-card catalog-project-card tilt-card" data-category="computational">
+            <div class="project-badge-row">
+              <span class="project-tag">Numerical Quadrature</span>
+              <span class="project-tag">Work-Energy</span>
+            </div>
+            <h3 class="project-title">Work Done by Complex Force Fields</h3>
+            <p class="project-desc">
+              Engineered algorithms computing work done by spatially and temporally variable forces using adaptive Simpson's and trapezoidal numerical quadrature. Evaluates work performed under nonlinear spring stiffness $F(x) = k_1 x + k_2 x^3$ and magnetic repulsion.
+            </p>
+            <div class="project-equation" style="background: var(--bg-surface-elevated); padding: 0.6rem 0.8rem; border-radius: var(--radius-sm); font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan); margin-bottom: 1rem;">
+              W = ∫_{x₁}^{x₂} F(x) dx = ΔK
+            </div>
+            <div class="project-tech-stack">
+              <span class="tech-pill">Numerical Methods</span>
+              <span class="tech-pill">Simpson's Rule</span>
+              <span class="tech-pill">JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/piashoverflow/Workdone" class="project-link" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i> Repository
+              </a>
+            </div>
+          </article>
+
+          <!-- 8. Banking of Roads & Centripetal Dynamics -->
+          <article class="project-card catalog-project-card tilt-card" data-category="fea">
+            <div class="project-badge-row">
+              <span class="project-tag">Transportation Mechanics</span>
+              <span class="project-tag">Friction Limits</span>
+            </div>
+            <h3 class="project-title">Dynamics of Banked Curved Roadways</h3>
+            <p class="project-desc">
+              Parametric engineering model evaluating super-elevation angle $\theta$, lateral tire friction limits $\mu_s$, and maximum non-skid vehicle velocity envelopes. Simulates slip vs skid instability regimes for highway curve geometry design.
+            </p>
+            <div class="project-equation" style="background: var(--bg-surface-elevated); padding: 0.6rem 0.8rem; border-radius: var(--radius-sm); font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan); margin-bottom: 1rem;">
+              v_{max} = √[r · g · (tan θ + μ) / (1 - μ · tan θ)]
+            </div>
+            <div class="project-tech-stack">
+              <span class="tech-pill">Dynamics</span>
+              <span class="tech-pill">Geometric Modeling</span>
+              <span class="tech-pill">Friction Envelopes</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/piashoverflow/Banking-Of-Roads" class="project-link" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i> Repository
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Bottom CTA Bar -->
+    <section class="section" style="background: var(--bg-surface); border-top: 1px solid var(--border-subtle); padding: 4rem 0;">
+      <div class="container" style="text-align: center;">
+        <h3 style="font-size: 1.8rem; margin-bottom: 0.85rem;">Explore Live Computational Simulations</h3>
+        <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 1.5rem auto;">
+          Test the Functionally Graded Material (FGM) Stress Analyzer and Atwood Dynamics Engine directly on the interactive workbench.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="{{ '/#simulator' | relative_url }}" class="btn-primary">
+            <i class="fas fa-atom"></i> Open Interactive Simulator
+          </a>
+          <a href="{{ '/research/' | relative_url }}" class="btn-secondary">
+            <i class="fas fa-microscope"></i> View Thesis Research
+          </a>
+          <a href="https://github.com/piashoverflow" class="btn-secondary" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i> Visit GitHub Profile
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div>
+        © {{ site.time | date: '%Y' }} <strong>Shamsuddin Piash</strong>. All rights reserved.
+      </div>
+      <ul class="footer-links">
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li><a href="{{ '/research/' | relative_url }}">Research</a></li>
+        <li><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
+        <li><a href="{{ '/teaching/' | relative_url }}">Teaching</a></li>
+        <li><a href="{{ '/cv/' | relative_url }}">CV</a></li>
+        <li><a href="{{ '/blogs/' | relative_url }}">Blogs</a></li>
+        <li><a href="https://github.com/piashoverflow" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast-notification"></div>
+
+  <!-- Scripts -->
+  <script src="{{ '/assets/js/portfolio.js' | relative_url }}"></script>
+</body>
+</html>

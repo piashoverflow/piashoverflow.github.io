@@ -1,0 +1,363 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum Vitae | Shamsuddin Piash</title>
+  <meta name="description" content="Curriculum Vitae of Shamsuddin Piash — BUET Mechanical Engineering graduate specializing in Structural Mechanics, FGM, FEA Optimization, and STEM Pedagogy.">
+  <meta name="author" content="Shamsuddin Piash">
+
+  <!-- OpenGraph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://piashoverflow.github.io/cv/">
+  <meta property="og:title" content="Curriculum Vitae | Shamsuddin Piash">
+  <meta property="og:description" content="Official Academic Curriculum Vitae of Shamsuddin Piash (BUET Mechanical Engineering).">
+  <meta property="og:image" content="{{ '/assets/img/profile.jpg' | relative_url }}">
+
+  <!-- Favicon & PWA -->
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon.svg' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/img/favicon-32x32.png' | relative_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
+  <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
+  <meta name="theme-color" content="#090d16">
+
+  <!-- Fonts & Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="{{ '/assets/css/portfolio.css' | relative_url }}">
+</head>
+<body>
+
+  <!-- Top Reading Progress Bar -->
+  <div id="scroll-progress"></div>
+  <div class="bg-grid-overlay"></div>
+
+  <!-- Navigation Bar -->
+  <header class="site-nav" id="site-nav">
+    <div class="container nav-container">
+      <a href="{{ '/' | relative_url }}" class="brand-logo" aria-label="Shamsuddin Piash">
+        <div class="brand-icon">SP</div>
+        <div class="brand-text">piash<span>overflow</span></div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="{{ '/' | relative_url }}" class="nav-link">Home</a></li>
+          <li><a href="{{ '/research/' | relative_url }}" class="nav-link">Research</a></li>
+          <li><a href="{{ '/projects/' | relative_url }}" class="nav-link">Projects</a></li>
+          <li><a href="{{ '/teaching/' | relative_url }}" class="nav-link">Teaching</a></li>
+          <li><a href="{{ '/cv/' | relative_url }}" class="nav-link active">CV</a></li>
+          <li><a href="{{ '/#simulator' | relative_url }}" class="nav-link"><i class="fas fa-atom"></i> Simulator</a></li>
+          <li><a href="{{ '/blogs/' | relative_url }}" class="nav-link blog-link"><i class="fas fa-pen-nib"></i> Blogs</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Switch Theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <a href="{{ '/assets/docs/Shamsuddin_Piash_CV.pdf' | relative_url }}" class="btn-cta-nav" target="_blank" rel="noopener noreferrer">
+          <i class="fas fa-file-pdf"></i> Download PDF
+        </a>
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <a href="{{ '/' | relative_url }}" class="nav-link">Home</a>
+    <a href="{{ '/research/' | relative_url }}" class="nav-link">Research & Thesis</a>
+    <a href="{{ '/projects/' | relative_url }}" class="nav-link">Projects Catalog</a>
+    <a href="{{ '/teaching/' | relative_url }}" class="nav-link">Teaching & Pedagogy</a>
+    <a href="{{ '/cv/' | relative_url }}" class="nav-link active">Curriculum Vitae</a>
+    <a href="{{ '/#simulator' | relative_url }}" class="nav-link"><i class="fas fa-atom"></i> Interactive Simulator</a>
+    <a href="{{ '/blogs/' | relative_url }}" class="nav-link blog-link"><i class="fas fa-pen-nib"></i> Read Blogs (/blogs)</a>
+  </div>
+
+  <main>
+    <!-- Subpage Hero Header -->
+    <section class="subpage-hero">
+      <canvas class="bg-network-canvas" aria-hidden="true"></canvas>
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="{{ '/' | relative_url }}"><i class="fas fa-home"></i> Home</a>
+          <span class="separator">/</span>
+          <span class="active-crumb">Curriculum Vitae</span>
+        </div>
+        <span class="section-tag"><i class="fas fa-file-invoice"></i> Academic Credentials</span>
+        <h1 class="subpage-title">Curriculum Vitae</h1>
+        <p class="subpage-lead">
+          Official academic curriculum vitae of Shamsuddin Piash. Synchronized with the latest 2-page LaTeX publication draft, detailed thesis investigations, and teaching honors.
+        </p>
+      </div>
+    </section>
+
+    <!-- CV Action Toolbar -->
+    <section class="section" style="padding-top: 2rem;">
+      <div class="container">
+        <div class="cv-action-bar">
+          <div>
+            <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-cyan);">
+              <i class="fas fa-check-circle"></i> Exact 2-Page LaTeX Verification
+            </span>
+          </div>
+          <div class="cv-action-group">
+            <a href="{{ '/assets/docs/Shamsuddin_Piash_CV.pdf' | relative_url }}" class="btn-primary" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-download"></i> Download PDF (73 KB)
+            </a>
+            <button onclick="window.print()" class="btn-secondary">
+              <i class="fas fa-print"></i> Print CV
+            </button>
+            <button id="copy-cv-email-btn" class="btn-secondary">
+              <i class="fas fa-envelope"></i> Copy Email
+            </button>
+          </div>
+        </div>
+
+        <!-- Web-Rendered LaTeX CV Document Paper -->
+        <article class="cv-paper-container" id="cv-paper">
+          <!-- Header -->
+          <h1 class="cv-name">SHAMSUDDIN PIASH</h1>
+          <div class="cv-title">Mechanical Engineering Graduate | Bangladesh University of Engineering and Technology (BUET)</div>
+          <div class="cv-sub">Specialization: Structural Mechanics · Functionally Graded Materials · Computational Optimization · FEA</div>
+          <div class="cv-contacts">
+            <span><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</span> &nbsp;|&nbsp;
+            <span><i class="fas fa-phone"></i> +880 1876-678141</span> &nbsp;|&nbsp;
+            <span><i class="fas fa-envelope"></i> <a href="mailto:mohammadshamsuddinpiash0722@gmail.com">mohammadshamsuddinpiash0722@gmail.com</a></span><br>
+            <span><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/shamsuddin-piash" target="_blank" rel="noopener noreferrer">linkedin.com/in/shamsuddin-piash</a></span> &nbsp;|&nbsp;
+            <span><i class="fab fa-github"></i> <a href="https://github.com/piashoverflow" target="_blank" rel="noopener noreferrer">github.com/piashoverflow</a></span> &nbsp;|&nbsp;
+            <span><i class="fas fa-globe"></i> <a href="https://piashoverflow.github.io" target="_blank" rel="noopener noreferrer">piashoverflow.github.io</a></span>
+          </div>
+
+          <!-- Education -->
+          <h2 class="cv-section-title">Education</h2>
+          <div class="cv-entry-row">
+            <span>Bangladesh University of Engineering and Technology (BUET)</span>
+            <span>Graduated: March 2025</span>
+          </div>
+          <div class="cv-entry-sub">
+            <span>Bachelor of Science in Mechanical Engineering (Student ID: 1910125)</span>
+            <em>Dhaka, Bangladesh</em>
+          </div>
+          <ul>
+            <li><strong>Undergraduate CGPA:</strong> <strong>3.37 / 4.00</strong></li>
+            <li><strong>Core Coursework:</strong> Solid Mechanics, Finite Element Analysis (FEA), Mechanical Vibrations, Fluid Mechanics, Heat Transfer, Machine Design I &amp; II, Mechanics of Machinery, Metallurgy &amp; Materials Science, Numerical Analysis, Thermodynamics.</li>
+          </ul>
+
+          <!-- Research Interests -->
+          <h2 class="cv-section-title">Research Interests</h2>
+          <ul>
+            <li><strong>Mechanics &amp; Materials:</strong> Functionally Graded Materials (FGM), Advanced Composite Structures, Solid Mechanics, Fracture Mechanics, Fatigue Analysis, Interfacial Stress &amp; Shear Transfer.</li>
+            <li><strong>Computational Modeling &amp; Optimization:</strong> Finite Element Analysis (FEA), Coupled Simulation, Mesh Refinement &amp; Convergence, Multi-Objective Optimization, Physics-Informed ML (PIML), Lightweight Design.</li>
+          </ul>
+
+          <!-- Undergraduate Thesis & Research -->
+          <h2 class="cv-section-title">Undergraduate Thesis &amp; Research</h2>
+          
+          <div class="cv-entry-row">
+            <span>Multi-Objective Optimization of Connecting Rods: A Coupled Thermal-Structural Approach</span>
+            <span>2024 – 2025</span>
+          </div>
+          <div class="cv-entry-sub">
+            <span>Undergraduate Thesis · Supervisor: Prof. Dr. Md. Afsar Ali, Dept. of Mechanical Engineering</span>
+            <em>BUET</em>
+          </div>
+          <ul>
+            <li>Modeled an industrial heavy-duty connecting rod (Wärtsilä 20 engine geometry) in <strong>SolidWorks</strong> and conducted coupled steady-state thermal and high-pressure mechanical FEA in <strong>ANSYS Workbench</strong> (82,500+ nodes, 29,500+ elements).</li>
+            <li>Formulated and executed a multi-objective optimization framework via <strong>Sum of Squared Errors (SSE)</strong> minimization across <strong>45 material configurations</strong> incorporating structural steel (AISI 4340), aluminum alloy (Al 7075-T6), and titanium alloy (Ti-6Al-4V).</li>
+            <li>Evaluated component mass, static factor of safety, fatigue factor of safety, and manufacturing cost to identify optimal bimaterial configurations delivering maximum strength-to-weight performance.</li>
+            <li>Applied <strong>Rule of Mixtures (ROM)</strong> homogenization approximations and evaluated interfacial shear stress distributions across critical bimaterial transition zones under peak combustion compressive loadings.</li>
+          </ul>
+
+          <div class="cv-entry-row" style="margin-top: 1rem;">
+            <span>Transition-Layer Design &amp; Optimization of Functionally Graded Material (FGM) Connecting Rods</span>
+            <span>2024 – Present</span>
+          </div>
+          <div class="cv-entry-sub">
+            <span>Follow-up Research Project · Computational Structural Mechanics</span>
+            <em>BUET</em>
+          </div>
+          <ul>
+            <li>Designed an innovative <strong>Functionally Graded Material (FGM) transition layer</strong> (8.85 mm interface) connecting an Aluminum Alloy shank to Structural Steel bearing ends to eliminate abrupt interface stiffness jumps and delamination risk.</li>
+            <li>Implemented and comparatively analyzed <strong>5 spatial gradation laws</strong> $V_1(x)$: Linear, Exponential ($\beta \in [0.2, 2.0]$), Sigmoid, Logarithmic, and Trigonometric ($V(x) = \frac{1}{2}[1 + \cos(\pi x/h)]$) volume fraction formulations.</li>
+            <li>Quantified <strong>10 distinct structural and fatigue performance metrics</strong> in ANSYS FEA: equivalent von Mises stress, total deformation, elastic strain, strain energy, static safety factor, fatigue life, fatigue damage, fatigue safety factor, and biaxiality.</li>
+            <li>Identified localized stiffness mismatch phenomena in stepped FGM layers and executed geometric fillet optimizations, achieving a <strong>14.88% enhancement</strong> in structural safety factor (5.29 vs. 4.61) through validated multi-layer stress convergence.</li>
+          </ul>
+
+          <!-- Scholarly Activity & Publications -->
+          <h2 class="cv-section-title">Scholarly Activity &amp; Publications</h2>
+
+          <div class="cv-entry-row">
+            <span>Multi-Objective Structural and Material Optimization of Bimaterial Mechanical Components</span>
+            <span>Submitted 2025</span>
+          </div>
+          <div class="cv-entry-sub">
+            <span>Co-Author · Submitted to ASME Journal of Mechanical Design (Under Review)</span>
+            <em>ASME JMD</em>
+          </div>
+          <ul>
+            <li><strong>Authors:</strong> Shamsuddin Piash, Md. Jahidul Hasan, Khan Yishtiaq Raatul, Dr. Md. Afsar Ali.</li>
+            <li>Details coupled thermal-structural finite element formulation, interfacial shear analysis, and SSE multi-objective optimization algorithms for high-performance bimaterial engine structural components.</li>
+          </ul>
+
+          <div class="cv-entry-row" style="margin-top: 1rem;">
+            <span>State-of-the-Art in Functionally Graded Material Gradation Laws and Computational Optimization</span>
+            <span>2025 – Present</span>
+          </div>
+          <div class="cv-entry-sub">
+            <span>Lead Author · Target: Q1 Materials/Mechanics Journal</span>
+            <em>In Prep</em>
+          </div>
+          <ul>
+            <li>Comprehensive state-of-the-art review synthesizing analytical gradation functions, homogenization theories (Voigt, Reuss, Mori-Tanaka), finite element formulations, and multi-objective optimization algorithms for structural FGM components.</li>
+          </ul>
+
+          <!-- Computational & Engineering Projects -->
+          <h2 class="cv-section-title">Computational &amp; Engineering Projects</h2>
+
+          <div class="cv-entry-row">
+            <span>Interactive Atwood Machine Physics Simulation</span>
+            <span>2024</span>
+          </div>
+          <div class="cv-entry-sub">
+            <span>Computational Mechanics Simulator · Deployed on Vercel Cloud · GitHub: piashoverflow</span>
+            <em>piashoverflow</em>
+          </div>
+          <ul>
+            <li>Engineered an interactive, cloud-deployed computational mechanics simulator modeling multi-body kinematics, string tension dynamics, and rotational inertia via numerical ODE integration.</li>
+            <li>Implemented continuous differential equation solvers via 4th-order Runge-Kutta (RK4), facilitating real-time parametric sweeps (varying mass ratios, pulley friction, and gravitational acceleration).</li>
+          </ul>
+
+          <div class="cv-entry-row" style="margin-top: 1rem;">
+            <span>Verification of Mechanical Energy Conservation in Oscillatory Systems</span>
+            <span>2023 – 2024</span>
+          </div>
+          <div class="cv-entry-sub">
+            <span>Classical Mechanics &amp; Numerical Analysis · Python / NumPy</span>
+            <em>Independent Study</em>
+          </div>
+          <ul>
+            <li>Formulated analytical derivations and numerical verification scripts analyzing mechanical energy conservation across diverse oscillatory regimes in Simple Harmonic Motion (SHM).</li>
+            <li>Generated phase space ($p$-$q$) trajectory portraits and implemented error-bounded algorithms to evaluate kinetic-to-potential energy exchanges under linear and non-linear damping.</li>
+          </ul>
+
+          <div class="cv-entry-row" style="margin-top: 1rem;">
+            <span>Solid-State Magnetism &amp; Magnetic Hysteresis Characterization</span>
+            <span>2023</span>
+          </div>
+          <div class="cv-entry-sub">
+            <span>Electromagnetism &amp; Materials Science Pedagogy</span>
+            <em>Academic Research</em>
+          </div>
+          <ul>
+            <li>Designed an analytical framework and visual experimental demonstrations detailing magnetic domain theory, ferromagnetism, paramagnetism, diamagnetism, and magnetic hysteresis ($B$-$H$ loop) energy dissipation.</li>
+            <li>Modeled macroscopic magnetization curves and coercivity/remanence characteristics for soft and hard ferromagnetic materials.</li>
+          </ul>
+
+          <!-- Teaching & Science Communication Experience -->
+          <h2 class="cv-section-title">Teaching &amp; Science Communication Experience</h2>
+
+          <div class="cv-entry-row">
+            <span>Udvash-Unmesh Academic &amp; Admission Care</span>
+            <span>2020 – Present (~5 Years)</span>
+          </div>
+          <div class="cv-entry-sub">
+            <span>Academic Content Contributor &amp; Physics Instructor</span>
+            <em>Dhaka, Bangladesh</em>
+          </div>
+          <ul>
+            <li>Conducted large-scale academic seminars and masterclasses for audiences of <strong>1,000–1,200 students</strong>, delivering rigorous, intuitive breakdowns of advanced physics and competitive engineering problem-solving.</li>
+            <li>Designed and presented conceptual demonstration lessons for the prominent <em><strong>Golpe Golpe Physics</strong></em> (Physics through Stories) video curriculum, elucidating fluid mechanics, buoyancy, electromagnetic induction, and mechanics via tabletop experiments.</li>
+            <li>Authored specialized conceptual problem sets and curricular modules for the elite <em><strong>"Tukhor"</strong></em> batch, preparing top-performing students for competitive engineering admissions.</li>
+            <li>Mentored and tutored over <strong>5,000 secondary and higher-secondary students</strong> across Physics, Mathematics, Chemistry, and ICT, focusing on first-principles understanding over rote learning.</li>
+            <li>Contributed educational technology UX and pedagogy recommendations (gamification frameworks, student XP progression, and structured learning pathways) for Udvash's online smart-learning ecosystem.</li>
+          </ul>
+
+          <!-- Technical Skills & Competencies -->
+          <h2 class="cv-section-title">Technical Skills &amp; Competencies</h2>
+          <ul>
+            <li><strong>Computational Solid Mechanics:</strong> Finite Element Analysis (FEA), Structural Optimization, Fracture &amp; Fatigue Analysis, Linear/Nonlinear Mechanics, Multi-layer FGM Modeling, Rule of Mixtures (ROM) Homogenization, Mesh Convergence.</li>
+            <li><strong>Simulation &amp; CAD Packages:</strong> ANSYS Workbench (Static Structural, Steady-State Thermal, Fatigue Analysis Module), SolidWorks (3D Parametric Solid Modeling, Assembly Analysis, Motion Simulation, Technical Drafting).</li>
+            <li><strong>Programming &amp; Scientific Computing:</strong> Python (NumPy, SciPy, Matplotlib), MATLAB (Numerical Linear Algebra, ODE Solvers), LaTeX Typesetting, Git/GitHub Version Control, Linux/Bash Scripting.</li>
+            <li><strong>Emerging Research Focus:</strong> Physics-Informed Machine Learning (PIML), Data-Driven Mechanical Modeling, Multi-Objective Optimization (SSE Minimization, Evolutionary Algorithms).</li>
+            <li><strong>Science Communication &amp; Leadership:</strong> Large-Audience Public Lecturing, Conceptual Demonstration Design, Scientific &amp; Technical Writing, STEM Curriculum Architecture, Student Mentorship.</li>
+          </ul>
+
+          <!-- Honors, Leadership & Outreach -->
+          <h2 class="cv-section-title">Honors, Leadership &amp; Outreach</h2>
+          <ul>
+            <li><strong>Invited Keynote Seminar Speaker:</strong> Invited speaker and masterclass instructor for nationwide academic outreach seminars organized by Udvash-Unmesh, presenting to audiences exceeding 1,000 students per session (2022 – Present).</li>
+            <li><strong>Undergraduate Admission Merit:</strong> Secured top-tier national merit rank in the highly competitive BUET Undergraduate Engineering Admission Examination among over 12,000 nationwide candidates (2019).</li>
+            <li><strong>STEM Educational Outreach:</strong> Designed and recorded online conceptual physics demonstration lectures achieving widespread engagement across student learning communities in Bangladesh.</li>
+          </ul>
+
+          <!-- Languages & Academic Objectives -->
+          <h2 class="cv-section-title">Languages &amp; Academic Objectives</h2>
+          <ul>
+            <li><strong>Languages:</strong> English (Full Professional &amp; Academic Working Proficiency), Bengali (Native).</li>
+            <li><strong>Academic Objectives:</strong> Seeking research-oriented Ph.D. / M.S. graduate admission (RA/TA) in Mechanical Engineering; focusing on Structural Mechanics, Computational Mechanics, FGM/Composites, and Data-Driven Optimization.</li>
+          </ul>
+        </article>
+
+        <!-- Inline Embedded PDF Viewer Section -->
+        <div style="margin-top: 3.5rem;">
+          <div class="section-header" style="text-align: left; margin-bottom: 1rem;">
+            <span class="section-tag">PDF Preview</span>
+            <h2 class="section-title">Embedded 2-Page LaTeX Document</h2>
+            <p class="section-subtitle">Compiled directly via Tectonic TeX Engine from source <code>Shamsuddin_Piash_CV.tex</code>.</p>
+          </div>
+
+          <div class="pdf-viewer-wrap">
+            <iframe src="{{ '/assets/docs/Shamsuddin_Piash_CV.pdf' | relative_url }}" title="Shamsuddin Piash Official CV"></iframe>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div>
+        © {{ site.time | date: '%Y' }} <strong>Shamsuddin Piash</strong>. All rights reserved.
+      </div>
+      <ul class="footer-links">
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li><a href="{{ '/research/' | relative_url }}">Research</a></li>
+        <li><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
+        <li><a href="{{ '/teaching/' | relative_url }}">Teaching</a></li>
+        <li><a href="{{ '/cv/' | relative_url }}">CV</a></li>
+        <li><a href="{{ '/blogs/' | relative_url }}">Blogs</a></li>
+        <li><a href="https://github.com/piashoverflow" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast-notification"></div>
+
+  <!-- Scripts -->
+  <script src="{{ '/assets/js/portfolio.js' | relative_url }}"></script>
+  <script>
+    const copyEmailBtn = document.getElementById('copy-cv-email-btn');
+    if (copyEmailBtn) {
+      copyEmailBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText('mohammadshamsuddinpiash0722@gmail.com').then(() => {
+          const toast = document.getElementById('toast-notification');
+          if (toast) {
+            toast.textContent = 'Copied email to clipboard!';
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2500);
+          }
+        });
+      });
+    }
+  </script>
+</body>
+</html>
