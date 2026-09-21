@@ -1,5 +1,5 @@
 # -----------------------------------------
-#     PIASH WRITES — Personal Blog Config
+#     PIASH OVERFLOW — Personal Blog Config
 # -----------------------------------------
 
 # Use Chirpy theme
@@ -10,7 +10,7 @@ lang: en
 timezone: Asia/Dhaka
 
 # SEO + Site Identity
-title: Piash Writes
+title: Piash Overflow
 tagline: Engineering • Research • Thoughts
 description: >-
   Personal blog by Shamsuddin Piash — Mechanical Engineering student,
