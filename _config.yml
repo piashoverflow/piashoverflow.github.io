@@ -16,10 +16,10 @@ description: >-
   Personal blog by Shamsuddin Piash — Mechanical Engineering student,
   interested in composites, FGM structures, and automotive engineering.
 
-url: "https://piashwrites.github.io"
+url: "https://piashoverflow.github.io"
 
 github:
-  username: piashwrites
+  username: piashoverflow
 
 twitter:
   username: # leave empty if not using
@@ -28,7 +28,8 @@ social:
   name: Shamsuddin Piash
   email: mohammadshamsuddinpiash0722@gmail.com
   links:
-    - https://github.com/piashwrites
+    - https://github.com/piashoverflow
+    - https://linkedin.com/in/shamsuddin-piash
 
 # SEO verification (keep empty unless you add them)
 webmaster_verifications:
@@ -85,6 +86,7 @@ pwa:
     deny_paths: []
 
 paginate: 10
+paginate_path: "/blogs/page:num/"
 
 baseurl: ""
 

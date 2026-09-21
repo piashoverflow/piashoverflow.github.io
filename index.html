@@ -1,4 +1,891 @@
 ---
-layout: home
-# Index page
+layout: null
 ---
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohammad Shamsuddin Piash | Mechanical Engineer & Computational Researcher</title>
+  <meta name="description" content="Portfolio of Mohammad Shamsuddin Piash — BUET Mechanical Engineering graduate specializing in Structural Mechanics, Functionally Graded Materials (FGM), FEA Optimization, and STEM Pedagogy.">
+  <meta name="author" content="Mohammad Shamsuddin Piash">
+
+  <!-- OpenGraph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://piashoverflow.github.io/">
+  <meta property="og:title" content="Mohammad Shamsuddin Piash | Mechanical Engineer & Computational Researcher">
+  <meta property="og:description" content="Structural Mechanics, Functionally Graded Materials (FGM), FEA Optimization, and Physics Simulations. BUET '25 graduate.">
+  <meta property="og:image" content="{{ '/assets/img/profile.jpg' | relative_url }}">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mohammad Shamsuddin Piash | Mechanical Engineering & Research">
+  <meta name="twitter:description" content="Structural Mechanics, Functionally Graded Materials (FGM), FEA Optimization, and Physics Simulations.">
+  <meta name="twitter:image" content="{{ '/assets/img/profile.jpg' | relative_url }}">
+
+  <!-- Icons & Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="{{ '/assets/css/portfolio.css' | relative_url }}">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mohammad Shamsuddin Piash",
+    "alternateName": "Shamsuddin Piash",
+    "url": "https://piashoverflow.github.io/",
+    "image": "https://piashoverflow.github.io/assets/img/profile.jpg",
+    "jobTitle": "Mechanical Engineer & Computational Researcher",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Bangladesh University of Engineering and Technology (BUET)"
+    },
+    "sameAs": [
+      "https://github.com/piashoverflow",
+      "https://linkedin.com/in/shamsuddin-piash"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Top Reading Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Ambient Engineering Grid Overlay -->
+  <div class="bg-grid-overlay"></div>
+
+  <!-- ==============================================================================
+       NAVIGATION BAR
+       ============================================================================== -->
+  <header class="site-nav" id="site-nav">
+    <div class="container nav-container">
+      <a href="{{ '/' | relative_url }}" class="brand-logo" aria-label="Mohammad Shamsuddin Piash">
+        <div class="brand-icon">SP</div>
+        <div class="brand-text">Piash<span>.eng</span></div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#research" class="nav-link">Research</a></li>
+          <li><a href="#simulator" class="nav-link"><i class="fas fa-atom"></i> Simulator</a></li>
+          <li><a href="#publications" class="nav-link">Publications</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#teaching" class="nav-link">Teaching</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="{{ '/blogs/' | relative_url }}" class="nav-link blog-link"><i class="fas fa-pen-nib"></i> Blogs</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Switch Theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <a href="#contact" class="btn-cta-nav">
+          <i class="fas fa-envelope"></i> Contact
+        </a>
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <a href="#research" class="nav-link">Research & Thesis</a>
+    <a href="#simulator" class="nav-link"><i class="fas fa-atom"></i> Interactive Simulator</a>
+    <a href="#publications" class="nav-link">Publications</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#teaching" class="nav-link">Teaching Experience</a>
+    <a href="#skills" class="nav-link">Technical Skills</a>
+    <a href="{{ '/blogs/' | relative_url }}" class="nav-link blog-link"><i class="fas fa-pen-nib"></i> Read Blogs (/blogs)</a>
+    <a href="{{ '/assets/docs/Shamsuddin_Piash_CV.pdf' | relative_url }}" class="btn-primary" target="_blank" rel="noopener noreferrer">
+      <i class="fas fa-file-pdf"></i> Download CV (PDF)
+    </a>
+  </div>
+
+  <main>
+    <!-- ==============================================================================
+         HERO SECTION
+         ============================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge-wrap">
+            <span class="status-pill">
+              <span class="pulse-dot"></span> Available for Graduate Studies & Research
+            </span>
+          </div>
+
+          <h1 class="hero-title">Mohammad Shamsuddin Piash</h1>
+          <div class="hero-subtitle">Mechanical Engineering & Computational Mechanics</div>
+
+          <div class="hero-affiliation">
+            <i class="fas fa-graduation-cap" style="color: var(--accent-cyan);"></i>
+            <span>B.Sc. in Mechanical Engineering</span>
+            <span class="affiliation-tag">BUET '25</span>
+          </div>
+
+          <p class="hero-description">
+            Mechanical Engineering graduate from <strong>Bangladesh University of Engineering and Technology (BUET)</strong>.
+            Specializing in <strong>Finite Element Analysis (FEA)</strong>, <strong>Functionally Graded Materials (FGM)</strong>, 
+            multi-objective structural optimization, and physics-informed modeling. Passionate about solving complex solid mechanics challenges 
+            and advancing STEM pedagogy.
+          </p>
+
+          <div class="research-pills">
+            <span class="research-pill"><i class="fas fa-layer-group"></i> Functionally Graded Materials (FGM)</span>
+            <span class="research-pill"><i class="fas fa-cubes"></i> ANSYS FEA & Fatigue</span>
+            <span class="research-pill"><i class="fas fa-sliders-h"></i> Multi-Objective Optimization</span>
+            <span class="research-pill"><i class="fas fa-brain"></i> Physics-Informed ML</span>
+            <span class="research-pill"><i class="fas fa-chalkboard-teacher"></i> STEM Pedagogy</span>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#research" class="btn-primary">
+              <i class="fas fa-microscope"></i> Explore Research
+            </a>
+            <a href="#simulator" class="btn-secondary">
+              <i class="fas fa-play-circle"></i> Live Simulator
+            </a>
+            <a href="{{ '/blogs/' | relative_url }}" class="btn-outline-blog">
+              <i class="fas fa-book-open"></i> Read Blogs
+            </a>
+            <a href="{{ '/assets/docs/Shamsuddin_Piash_CV.pdf' | relative_url }}" class="btn-secondary" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-download"></i> CV (PDF)
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="profile-card-wrapper">
+            <!-- Floating Metric Badges -->
+            <div class="floating-badge badge-top-left">
+              <div class="badge-icon"><i class="fas fa-award"></i></div>
+              <div>
+                <div class="badge-text-val">BUET '25</div>
+                <div class="badge-text-lbl">CGPA 3.37 / 4.00</div>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-bottom-right">
+              <div class="badge-icon"><i class="fas fa-shield-alt"></i></div>
+              <div>
+                <div class="badge-text-val">+14.88%</div>
+                <div class="badge-text-lbl">FGM Safety Factor Gain</div>
+              </div>
+            </div>
+
+            <div class="profile-card">
+              <div class="profile-card-glow"></div>
+              <div class="profile-img-container">
+                <img src="{{ '/assets/img/profile.jpg' | relative_url }}" alt="Mohammad Shamsuddin Piash" class="profile-img">
+              </div>
+              <div class="profile-card-info">
+                <h3>Shamsuddin Piash</h3>
+                <p>Mechanical Engineer • Researcher • Instructor</p>
+                <div class="profile-meta-row">
+                  <span class="profile-meta-item"><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</span>
+                  <span class="profile-meta-item"><i class="fab fa-github"></i> @piashoverflow</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================================================
+         KEY METRICS BAR
+         ============================================================================== -->
+    <section class="metrics-bar-section">
+      <div class="container metrics-grid">
+        <div class="metric-box">
+          <div class="metric-number" data-target="3.37" data-decimals="2">0.00</div>
+          <div class="metric-label">BUET CGPA</div>
+          <div class="metric-subtext">Mechanical Engineering</div>
+        </div>
+
+        <div class="metric-box">
+          <div class="metric-number" data-target="45" data-decimals="0">0</div>
+          <div class="metric-label">Material Configs</div>
+          <div class="metric-subtext">Coupled FEA Optimization</div>
+        </div>
+
+        <div class="metric-box">
+          <div class="metric-number" data-target="14.88" data-decimals="2" data-prefix="+" data-suffix="%">+0.00%</div>
+          <div class="metric-label">Safety Factor Gain</div>
+          <div class="metric-subtext">FGM Transition Optimization</div>
+        </div>
+
+        <div class="metric-box">
+          <div class="metric-number" data-target="5000" data-decimals="0" data-suffix="+">0+</div>
+          <div class="metric-label">Students Mentored</div>
+          <div class="metric-subtext">Udvash-Unmesh STEM Care</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================================================
+         INTERACTIVE SIMULATOR WORKBENCH (ADVANCED JS & CANVAS)
+         ============================================================================== -->
+    <section class="section" id="simulator">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Interactive Physics Workbench</span>
+          <h2 class="section-title">Computational Mechanics & Physics Simulator</h2>
+          <p class="section-subtitle">
+            Experience my engineering research in real time. Switch between the <strong>Functionally Graded Material (FGM) Stress Analyzer</strong> 
+            and the <strong>Dynamic Atwood Machine</strong> physics engine.
+          </p>
+        </div>
+
+        <div class="simulator-card">
+          <div class="simulator-header">
+            <div class="sim-tabs">
+              <button class="sim-tab-btn active" id="tab-sim-fgm">
+                <i class="fas fa-layer-group"></i> FGM Stress Analyzer
+              </button>
+              <button class="sim-tab-btn" id="tab-sim-atwood">
+                <i class="fas fa-atom"></i> Atwood Physics Engine
+              </button>
+            </div>
+            <div class="sim-status-indicator">
+              <i class="fas fa-circle-notch fa-spin"></i> Live Physics Compute Engine Active
+            </div>
+          </div>
+
+          <div class="simulator-body">
+            <!-- Controls Sidebar -->
+            <div class="simulator-controls">
+              <!-- FGM Controls -->
+              <div id="controls-fgm" style="display: flex; flex-direction: column; gap: 1.3rem;">
+                <div class="control-group">
+                  <label for="fgm-law">Gradation Distribution Law:</label>
+                  <select id="fgm-law">
+                    <option value="exponential" selected>Exponential Law (Smooth Gradient)</option>
+                    <option value="linear">Linear Distribution (V = x/L)</option>
+                    <option value="sigmoid">Sigmoid S-Curve (Min Shear)</option>
+                    <option value="bimaterial">Bimaterial Abrupt Joint (Discontinuous)</option>
+                  </select>
+                </div>
+
+                <div class="control-group" id="fgm-beta-group">
+                  <label for="fgm-beta">Gradation Index (β): <span class="val" id="fgm-beta-val">1.0</span></label>
+                  <input type="range" id="fgm-beta" min="0.2" max="2.0" step="0.1" value="1.0">
+                </div>
+
+                <div class="control-group">
+                  <label for="fgm-load">Applied Combustion Pressure (P): <span class="val" id="fgm-load-val">65 MPa</span></label>
+                  <input type="range" id="fgm-load" min="20" max="120" step="5" value="65">
+                </div>
+
+                <div class="control-group">
+                  <label for="fgm-temp">Thermal Gradient (ΔT): <span class="val" id="fgm-temp-val">120 °C</span></label>
+                  <input type="range" id="fgm-temp" min="20" max="250" step="10" value="120">
+                </div>
+
+                <div class="sim-formula-box">
+                  <div>Active Formulation:</div>
+                  <div class="highlight" id="readout-law-formula">Exponential: V(x) = (e^{βx/L} - 1)/(e^β - 1)</div>
+                  <div style="margin-top: 0.4rem; font-size: 0.72rem; color: var(--text-muted);">
+                    Al 7075-T6 (Shank) ↔ AISI 4340 (Bearing)
+                  </div>
+                </div>
+              </div>
+
+              <!-- Atwood Controls -->
+              <div id="controls-atwood" style="display: none; flex-direction: column; gap: 1.3rem;">
+                <div class="control-group">
+                  <label for="atwood-m1">Suspended Mass m₁: <span class="val" id="atwood-m1-val">3.0 kg</span></label>
+                  <input type="range" id="atwood-m1" min="0.5" max="10" step="0.5" value="3.0">
+                </div>
+
+                <div class="control-group">
+                  <label for="atwood-m2">Suspended Mass m₂: <span class="val" id="atwood-m2-val">5.0 kg</span></label>
+                  <input type="range" id="atwood-m2" min="0.5" max="10" step="0.5" value="5.0">
+                </div>
+
+                <div class="control-group">
+                  <label for="atwood-inertia">Pulley Inertia (I): <span class="val" id="atwood-inertia-val">0.5 kg·m²</span></label>
+                  <input type="range" id="atwood-inertia" min="0.1" max="3.0" step="0.1" value="0.5">
+                </div>
+
+                <div class="control-group">
+                  <label for="atwood-friction">Axle Friction (μ): <span class="val" id="atwood-friction-val">0.05</span></label>
+                  <input type="range" id="atwood-friction" min="0.00" max="0.30" step="0.02" value="0.05">
+                </div>
+
+                <div style="display: flex; gap: 0.6rem; margin-top: 0.5rem;">
+                  <button class="btn-primary" id="atwood-play-btn" style="flex: 1; padding: 0.6rem;">
+                    <i class="fas fa-play"></i> Start / Pause
+                  </button>
+                  <button class="btn-secondary" id="atwood-reset-btn" style="padding: 0.6rem 1rem;">
+                    <i class="fas fa-redo"></i> Reset
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Canvas Viewport -->
+            <div class="simulator-canvas-area">
+              <div class="canvas-container">
+                <canvas id="sim-canvas"></canvas>
+              </div>
+
+              <!-- FGM Readouts -->
+              <div class="sim-readouts" id="readouts-fgm">
+                <div class="readout-card">
+                  <div class="readout-lbl">Peak von Mises Stress</div>
+                  <div class="readout-val" id="readout-max-stress">118.5 MPa</div>
+                </div>
+                <div class="readout-card">
+                  <div class="readout-lbl">Interfacial Shear (τ)</div>
+                  <div class="readout-val accent" id="readout-shear">8.7 MPa</div>
+                </div>
+                <div class="readout-card">
+                  <div class="readout-lbl">Factor of Safety (SF)</div>
+                  <div class="readout-val" id="readout-sf" style="color: var(--accent-emerald);">5.29</div>
+                </div>
+                <div class="readout-card">
+                  <div class="readout-lbl">Strain Energy (U)</div>
+                  <div class="readout-val" id="readout-energy">18.2 mJ</div>
+                </div>
+              </div>
+
+              <!-- Atwood Readouts -->
+              <div class="sim-readouts" id="readouts-atwood" style="display: none;">
+                <div class="readout-card">
+                  <div class="readout-lbl">Net Acceleration (a)</div>
+                  <div class="readout-val" id="readout-atwood-acc">2.18 m/s²</div>
+                </div>
+                <div class="readout-card">
+                  <div class="readout-lbl">Tension T₁ (Left)</div>
+                  <div class="readout-val accent" id="readout-atwood-t1">35.9 N</div>
+                </div>
+                <div class="readout-card">
+                  <div class="readout-lbl">Tension T₂ (Right)</div>
+                  <div class="readout-val" id="readout-atwood-t2">38.1 N</div>
+                </div>
+                <div class="readout-card">
+                  <div class="readout-lbl">Instant Velocity (v)</div>
+                  <div class="readout-val" id="readout-atwood-vel">0.00 m/s</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================================================
+         UNDERGRADUATE THESIS & RESEARCH SHOWCASE
+         ============================================================================== -->
+    <section class="section" id="research">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Scholarly Focus</span>
+          <h2 class="section-title">Undergraduate Thesis & Advanced Mechanics</h2>
+          <p class="section-subtitle">
+            Conducting multi-physics finite element investigations and optimization algorithms at the Department of Mechanical Engineering, BUET.
+          </p>
+        </div>
+
+        <div class="research-grid">
+          <!-- Research Project 1 -->
+          <div class="research-card">
+            <div class="research-badge"><i class="fas fa-cog"></i> Undergraduate Thesis (2024–2025)</div>
+            <h3 class="research-card-title">Multi-Objective Optimization of Connecting Rods: A Coupled Thermal-Structural Approach</h3>
+            <div class="research-meta">
+              BUET Department of Mechanical Engineering • Supervisor: Prof. Dr. Md. Afsar Ali
+            </div>
+            <ul class="research-bullets">
+              <li>Developed a comprehensive finite element simulation framework in <strong>ANSYS Workbench</strong> coupled with <strong>SolidWorks</strong> for heavy-duty IC engine connecting rods under combined peak thermal and mechanical combustion loading.</li>
+              <li>Formulated and implemented a multi-objective optimization scheme using <strong>Sum of Squared Errors (SSE)</strong> minimization across <strong>45 material configurations</strong> (Structural Steel AISI 4340, Aluminum 7075-T6, and Titanium Ti-6Al-4V).</li>
+              <li>Quantified component mass, static factor of safety, fatigue safety factor, and material economy to achieve globally optimal strength-to-weight bimaterial combinations.</li>
+              <li>Investigated <strong>Rule of Mixtures (ROM)</strong> homogenization models and resolved shear stress transfers across material interfaces.</li>
+            </ul>
+            <div class="metrics-pill-row">
+              <span class="metric-pill-item">ANSYS Workbench</span>
+              <span class="metric-pill-item">45 Configurations</span>
+              <span class="metric-pill-item">SSE Minimization</span>
+              <span class="metric-pill-item">Fatigue Tool</span>
+            </div>
+          </div>
+
+          <!-- Research Project 2 -->
+          <div class="research-card">
+            <div class="research-badge" style="color: var(--accent-emerald);"><i class="fas fa-layer-group"></i> Follow-up Research Project (2024–Present)</div>
+            <h3 class="research-card-title">Transition-Layer Design & Optimization of Functionally Graded Material (FGM) Connecting Rods</h3>
+            <div class="research-meta">
+              Computational Solid Mechanics • Structural Integrity
+            </div>
+            <ul class="research-bullets">
+              <li>Engineered a continuous <strong>8.85 mm FGM transition interface</strong> joining an Aluminum alloy shank to Structural Steel bearing ends, eliminating sharp material discontinuities and mitigating delamination risk.</li>
+              <li>Formulated and comparatively evaluated <strong>5 spatial material gradation laws V₁(x)</strong>: Linear, Exponential (β = 0.2, 0.5, 1.0, 1.5, 2.0), Sigmoid, Logarithmic, and Trigonometric.</li>
+              <li>Tracked <strong>10 distinct structural & fatigue metrics</strong>: equivalent von Mises stress, deformation, elastic strain, strain energy, static SF, fatigue life, fatigue damage, fatigue SF, and biaxiality.</li>
+              <li>Executed localized stiffness matching and geometric fillet optimizations, achieving a <strong>14.88% boost in factor of safety (5.29 vs. 4.61)</strong> over bimaterial joints.</li>
+            </ul>
+            <div class="metrics-pill-row">
+              <span class="metric-pill-item">8.85 mm FGM Interface</span>
+              <span class="metric-pill-item">5 Gradation Laws</span>
+              <span class="metric-pill-item">+14.88% SF Gain</span>
+              <span class="metric-pill-item">Delamination Mitigation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================================================
+         PUBLICATIONS & SCHOLARLY ACTIVITY
+         ============================================================================== -->
+    <section class="section" id="publications" style="background: var(--gradient-card);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Academic Output</span>
+          <h2 class="section-title">Scholarly Publications & Preprints</h2>
+          <p class="section-subtitle">Manuscripts submitted and in preparation for international peer-reviewed journals.</p>
+        </div>
+
+        <div class="publications-list">
+          <!-- Publication 1 -->
+          <div class="pub-card">
+            <div class="pub-content">
+              <div class="pub-badge-row">
+                <span class="pub-status-badge">Under Review (2025)</span>
+                <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">ASME-JMD-2025</span>
+              </div>
+              <h3 class="pub-title">Multi-Objective Structural and Material Optimization of Bimaterial Mechanical Components</h3>
+              <div class="pub-venue">American Society of Mechanical Engineers (ASME) Journal of Mechanical Design</div>
+              <p class="pub-desc">
+                Presents coupled thermo-structural finite element formulations, SSE optimization schemes, and parametric CAD 
+                exploring mass reduction and fatigue life enhancement for multi-material engine components.
+              </p>
+            </div>
+            <div class="pub-actions">
+              <button class="btn-cite" data-bibtex="asme-2025">
+                <i class="fas fa-quote-right"></i> Copy BibTeX
+              </button>
+            </div>
+          </div>
+
+          <!-- Publication 2 -->
+          <div class="pub-card">
+            <div class="pub-content">
+              <div class="pub-badge-row">
+                <span class="pub-status-badge" style="color: var(--accent-cyan); background: rgba(56, 189, 248, 0.1); border-color: rgba(56, 189, 248, 0.3);">
+                  In Preparation (2025)
+                </span>
+                <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">Review Article</span>
+              </div>
+              <h3 class="pub-title">State-of-the-Art in Functionally Graded Material Gradation Laws and Computational Optimization</h3>
+              <div class="pub-venue">Target: Q1 Materials & Structural Mechanics Journal</div>
+              <p class="pub-desc">
+                Comprehensive literature synthesis of continuous gradation functions, micromechanical homogenization theories, 
+                FEA modeling challenges, and multi-objective optimization algorithms in structural FGM systems.
+              </p>
+            </div>
+            <div class="pub-actions">
+              <button class="btn-cite" data-bibtex="fgm-review">
+                <i class="fas fa-quote-right"></i> Copy BibTeX
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================================================
+         PROJECTS & COMPUTATIONAL TOOLS
+         ============================================================================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Engineering Portfolio</span>
+          <h2 class="section-title">Computational Mechanics & Physics Projects</h2>
+          <p class="section-subtitle">Open-source simulations, numerical analysis scripts, and interactive STEM tools.</p>
+        </div>
+
+        <div class="projects-filter-bar">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="fea">FEA & Mechanics</button>
+          <button class="filter-btn" data-filter="sim">Simulations & Web</button>
+          <button class="filter-btn" data-filter="computational">Computational Scripts</button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card" data-category="sim">
+            <div class="project-top">
+              <span class="project-category-tag">Web Simulation</span>
+              <a href="https://github.com/piashoverflow/atwood-machine" class="project-link-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+            <h4 class="project-name">Interactive Atwood Machine Physics Simulation</h4>
+            <p class="project-desc">
+              Cloud-deployed computational mechanics simulator modeling multi-body kinematics, rope tension dynamics, 
+              and pulley rotational inertia using numerical ODE integration with real-time parameter sweeps.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">ODE Solvers</span>
+              <span class="project-tag">JavaScript Canvas</span>
+              <span class="project-tag">Kinematics</span>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card" data-category="computational">
+            <div class="project-top">
+              <span class="project-category-tag">Classical Mechanics</span>
+              <a href="https://github.com/piashoverflow/Conservation-of-Mechanical-Energy" class="project-link-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+            <h4 class="project-name">Mechanical Energy Conservation Verifier</h4>
+            <p class="project-desc">
+              Analytical derivations and numerical verification of energy conservation across Simple Harmonic Motion (SHM) 
+              regimes with linear and nonlinear damping perturbations.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">SciPy</span>
+              <span class="project-tag">Energy Dynamics</span>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card" data-category="fea">
+            <div class="project-top">
+              <span class="project-category-tag">Materials Science</span>
+              <a href="https://github.com/piashoverflow" class="project-link-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+            <h4 class="project-name">Solid-State Magnetism & Hysteresis Simulator</h4>
+            <p class="project-desc">
+              Rigorous model detailing magnetic domain theory, ferromagnetism, and hysteresis (B-H curve) energy dissipation 
+              for educational and materials engineering demonstrations.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">B-H Loop</span>
+              <span class="project-tag">Electromagnetism</span>
+              <span class="project-tag">Materials</span>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card" data-category="computational">
+            <div class="project-top">
+              <span class="project-category-tag">Computational Tools</span>
+              <a href="https://github.com/piashoverflow/Displacement-of-COM" class="project-link-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+            <h4 class="project-name">Displacement of Center of Mass (COM) Engine</h4>
+            <p class="project-desc">
+              Computational framework calculating discrete and continuous center of mass displacements under internal and 
+              external force systems for complex mechanical geometries.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Mass Moments</span>
+              <span class="project-tag">Rigid Body</span>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="project-card" data-category="computational">
+            <div class="project-top">
+              <span class="project-category-tag">Physics Engine</span>
+              <a href="https://github.com/piashoverflow/Workdone" class="project-link-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+            <h4 class="project-name">Workdone & Force Integral Calculator</h4>
+            <p class="project-desc">
+              Interactive numerical integration tool computing work done by variable, conservative, and non-conservative forces 
+              along arbitrary 2D and 3D paths.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Calculus</span>
+              <span class="project-tag">Work-Energy</span>
+              <span class="project-tag">Line Integrals</span>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div class="project-card" data-category="fea">
+            <div class="project-top">
+              <span class="project-category-tag">Aerospace Mechanics</span>
+              <a href="https://github.com/piashoverflow/Rocket-propulsion" class="project-link-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+            <h4 class="project-name">Rocket Propulsion & Variable Mass Dynamics</h4>
+            <p class="project-desc">
+              Numerical solver implementing the Tsiolkovsky rocket equation with atmospheric drag variation, staging mass ratios, 
+              and thrust vectoring profiles.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Variable Mass</span>
+              <span class="project-tag">Propulsion</span>
+              <span class="project-tag">Trajectory</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================================================
+         TEACHING & SCIENCE COMMUNICATION (UDVASH-UNMESH)
+         ============================================================================== -->
+    <section class="section" id="teaching" style="background: var(--gradient-card);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Science Communication</span>
+          <h2 class="section-title">Teaching & STEM Pedagogy Leadership</h2>
+          <p class="section-subtitle">Dedicated to demystifying complex physics and inspiring thousands of young minds.</p>
+        </div>
+
+        <div class="teaching-grid">
+          <div class="teaching-content">
+            <span class="teaching-role-badge"><i class="fas fa-certificate"></i> Senior Academic Instructor (2020–Present)</span>
+            <h3 class="teaching-title">Academic Content Contributor & Physics Instructor</h3>
+            <div class="teaching-institution">Udvash-Unmesh Academic & Admission Care (~5 Years)</div>
+
+            <div class="teaching-stats-row">
+              <div class="teaching-stat-item">
+                <div class="teaching-stat-val">5,000+</div>
+                <div class="teaching-stat-lbl">Students Taught</div>
+              </div>
+              <div class="teaching-stat-item">
+                <div class="teaching-stat-val">1,200</div>
+                <div class="teaching-stat-lbl">Seminar Audiences</div>
+              </div>
+              <div class="teaching-stat-item">
+                <div class="teaching-stat-val">5+ Yrs</div>
+                <div class="teaching-stat-lbl">STEM Instruction</div>
+              </div>
+            </div>
+
+            <ul class="teaching-bullets">
+              <li>Conducted large-scale academic masterclasses and keynote seminars for audiences of <strong>1,000–1,200 students</strong>, delivering intuitive, rigorous breakdowns of competitive engineering physics.</li>
+              <li>Served as conceptual demonstrator for the renowned <strong><em>"Golpe Golpe Physics"</em> (Physics through Stories)</strong> video curriculum, elucidating fluid mechanics, buoyancy, and electromagnetism via hands-on physical experiments.</li>
+              <li>Mentored 5,000+ secondary and higher-secondary students in Physics, Mathematics, and ICT, focusing on deep foundational intuition rather than rote memorization.</li>
+              <li>Contributed pedagogical UX and gamification frameworks (achievement mechanics, structured learning pathways) for Udvash's online smart-learning ecosystem.</li>
+            </ul>
+          </div>
+
+          <div class="teaching-quote-card">
+            <div class="quote-mark">“</div>
+            <p class="quote-text">
+              Physics is not a collection of formulas to memorize; it is the universal language through which nature whispers its secrets. When a student grasps the fundamental intuition behind a law of mechanics, problem-solving transitions from a struggle into an art.
+            </p>
+            <div class="quote-author">— Shamsuddin Piash</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================================================
+         TECHNICAL SKILLS MATRIX
+         ============================================================================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Competencies</span>
+          <h2 class="section-title">Technical Skills & Software Matrix</h2>
+          <p class="section-subtitle">Proficiencies acquired through academic research, thesis projects, and scientific software development.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Skill Category 1 -->
+          <div class="skill-category-card">
+            <div class="skill-card-icon"><i class="fas fa-drafting-compass"></i></div>
+            <h4 class="skill-card-title">Engineering Mechanics</h4>
+            <div class="skill-badges">
+              <span class="skill-badge">Solid Mechanics</span>
+              <span class="skill-badge">Structural FEA</span>
+              <span class="skill-badge">Fatigue & Fracture</span>
+              <span class="skill-badge">FGM Composites</span>
+              <span class="skill-badge">Heat Transfer</span>
+              <span class="skill-badge">Dynamics & Vibrations</span>
+            </div>
+          </div>
+
+          <!-- Skill Category 2 -->
+          <div class="skill-category-card">
+            <div class="skill-card-icon"><i class="fas fa-cube"></i></div>
+            <h4 class="skill-card-title">CAD & Simulation</h4>
+            <div class="skill-badges">
+              <span class="skill-badge">ANSYS Workbench</span>
+              <span class="skill-badge">Static Structural</span>
+              <span class="skill-badge">Thermal FEA</span>
+              <span class="skill-badge">Fatigue Tool</span>
+              <span class="skill-badge">SolidWorks 3D CAD</span>
+              <span class="skill-badge">Mesh Convergence</span>
+            </div>
+          </div>
+
+          <!-- Skill Category 3 -->
+          <div class="skill-category-card">
+            <div class="skill-card-icon"><i class="fas fa-code"></i></div>
+            <h4 class="skill-card-title">Scientific Computing</h4>
+            <div class="skill-badges">
+              <span class="skill-badge">Python (NumPy/SciPy)</span>
+              <span class="skill-badge">Matplotlib</span>
+              <span class="skill-badge">MATLAB</span>
+              <span class="skill-badge">LaTeX / Tectonic</span>
+              <span class="skill-badge">Git & GitHub CLI</span>
+              <span class="skill-badge">Linux / Bash</span>
+            </div>
+          </div>
+
+          <!-- Skill Category 4 -->
+          <div class="skill-category-card">
+            <div class="skill-card-icon"><i class="fas fa-brain"></i></div>
+            <h4 class="skill-card-title">Emerging Methods</h4>
+            <div class="skill-badges">
+              <span class="skill-badge">Physics-Informed ML (PIML)</span>
+              <span class="skill-badge">Multi-Objective SSE</span>
+              <span class="skill-badge">Genetic Algorithms</span>
+              <span class="skill-badge">Public Speaking</span>
+              <span class="skill-badge">Technical Writing</span>
+              <span class="skill-badge">EdTech Pedagogy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================================================
+         BLOG & ESSAYS (BRIDGE TO /blogs)
+         ============================================================================== -->
+    <section class="section" id="blogs">
+      <div class="container">
+        <div class="blog-banner-card">
+          <div class="blog-banner-info">
+            <h3><i class="fas fa-pen-nib" style="color: var(--accent-cyan);"></i> Piash Writes — Blog & Reflections</h3>
+            <p>Read full-length essays, engineering notes, and philosophical musings on my Jekyll blog.</p>
+          </div>
+          <a href="{{ '/blogs/' | relative_url }}" class="btn-primary">
+            <i class="fas fa-external-link-alt"></i> Open Full Blog (/blogs)
+          </a>
+        </div>
+
+        <div class="blog-posts-grid">
+          <!-- Post 1 -->
+          <article class="blog-card">
+            <div class="blog-card-meta">
+              <span><i class="far fa-calendar"></i> April 6, 2025</span>
+              <span><i class="far fa-folder"></i> Reflection</span>
+            </div>
+            <h4 class="blog-card-title">কলঙ্কের মুক্ত শিকল</h4>
+            <p class="blog-card-desc">
+              দ্রোহের কোন শব্দ নাই তাই বলে নিশ্চুপ থাকা ভাষা বা প্রতিউত্তর হতে পারেনা। ধর্ম ও মনুষ্যত্বের সীমারেখায় দাঁড়িয়ে বিশ্ববিবেক এবং ফিলিস্তিনের সংকটের এক আত্মিক প্রতিফলন।
+            </p>
+            <a href="{{ '/posts/kolanker-mukto-shikol-palestine/' | relative_url }}" class="blog-card-link">
+              Read Essay <i class="fas fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <!-- Post 2 -->
+          <article class="blog-card">
+            <div class="blog-card-meta">
+              <span><i class="far fa-calendar"></i> September 21, 2020</span>
+              <span><i class="far fa-folder"></i> Reflections</span>
+            </div>
+            <h4 class="blog-card-title">এক তপ্ত হৃদয় নির্যাস</h4>
+            <p class="blog-card-desc">
+              ব্যক্তিগত অনুভূতি ও জীবনের গভীর উপলব্ধি নিয়ে রচিত ভাবগম্ভীর সাহিত্যিক রচনা ও আত্মদর্শন।
+            </p>
+            <a href="{{ '/posts/ek-tapto-hridoy-niryas/' | relative_url }}" class="blog-card-link">
+              Read Essay <i class="fas fa-arrow-right"></i>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================================================
+         CONTACT SECTION
+         ============================================================================== -->
+    <section class="contact-section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-info-block">
+          <span class="section-tag">Get in Touch</span>
+          <h3>Let's Collaborate</h3>
+          <p>
+            I am actively seeking graduate research opportunities, computational engineering collaborations, 
+            and academic exchanges. Feel free to connect via email, LinkedIn, or explore my GitHub.
+          </p>
+
+          <div class="contact-channels">
+            <a href="mailto:mohammadshamsuddinpiash0722@gmail.com" class="contact-channel-item">
+              <div class="channel-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <div class="channel-label">Email Address</div>
+                <div class="channel-val">mohammadshamsuddinpiash0722@gmail.com</div>
+              </div>
+            </a>
+
+            <a href="https://linkedin.com/in/shamsuddin-piash" class="contact-channel-item" target="_blank" rel="noopener noreferrer">
+              <div class="channel-icon"><i class="fab fa-linkedin-in"></i></div>
+              <div>
+                <div class="channel-label">LinkedIn</div>
+                <div class="channel-val">linkedin.com/in/shamsuddin-piash</div>
+              </div>
+            </a>
+
+            <a href="https://github.com/piashoverflow" class="contact-channel-item" target="_blank" rel="noopener noreferrer">
+              <div class="channel-icon"><i class="fab fa-github"></i></div>
+              <div>
+                <div class="channel-label">GitHub</div>
+                <div class="channel-val">github.com/piashoverflow</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-cta-box">
+          <h4>Download Full Curriculum Vitae</h4>
+          <p>Includes detailed academic transcripts, thesis methodology, conference submissions, and teaching references.</p>
+          <a href="{{ '/assets/docs/Shamsuddin_Piash_CV.pdf' | relative_url }}" class="btn-primary" style="width: 100%; justify-content: center; margin-bottom: 1rem;" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-file-pdf"></i> Download CV (PDF)
+          </a>
+          <button id="copy-email-btn" class="btn-secondary" style="width: 100%; justify-content: center;">
+            <i class="fas fa-copy"></i> Copy Email Address
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==============================================================================
+       FOOTER
+       ============================================================================== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div>
+        © {{ site.time | date: '%Y' }} <strong>Mohammad Shamsuddin Piash</strong>. All rights reserved.
+      </div>
+      <ul class="footer-links">
+        <li><a href="#hero">Back to Top ↑</a></li>
+        <li><a href="{{ '/blogs/' | relative_url }}">Blog Archive</a></li>
+        <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+        <li><a href="https://github.com/piashoverflow" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast-notification"></div>
+
+  <!-- Scripts -->
+  <script src="{{ '/assets/js/portfolio.js' | relative_url }}"></script>
+</body>
+</html>
