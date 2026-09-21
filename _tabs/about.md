@@ -9,7 +9,7 @@ order: 4
 
 **Mechanical Engineering Graduate**  
 *Bangladesh University of Engineering and Technology (BUET)*  
-**CGPA:** 3.37 / 4.00 (Class of 2025)
+*Class of 2025 (Graduated March 2025)*
 
 ---
 
